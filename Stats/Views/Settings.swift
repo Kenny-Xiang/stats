@@ -222,6 +222,10 @@ private class MainView: NSView {
     }
 
     fileprivate func setView(_ view: NSView) {
+        if self.container.arrangedSubviews.first === view {
+            return
+        }
+
         self.container.subviews.forEach{ $0.removeFromSuperview() }
         self.container.addArrangedSubview(view)
 

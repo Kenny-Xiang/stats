@@ -657,6 +657,14 @@ open class Window: NSStackView {
     }
 
     public func setApplicationSettingsView(_ view: NSView, willAppear: (() -> Void)? = nil) {
+        if self.applicationSettingsView === view {
+            self.applicationSettingsWillAppear = willAppear
+            if self.applicationSettingsContainer?.arrangedSubviews.contains(where: { $0 === view }) == true {
+                self.applicationSettingsWillAppear?()
+                return
+            }
+        }
+
         self.applicationSettingsView = view
         self.applicationSettingsWillAppear = willAppear
         self.loadApplicationSettings()
