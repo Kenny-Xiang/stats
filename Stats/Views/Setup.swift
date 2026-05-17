@@ -57,6 +57,7 @@ internal class SetupWindow: NSWindow, NSWindowDelegate {
     
     func windowWillClose(_ notification: Notification) {
         self.finishHandler()
+        self.finishHandler = {}
         let onClose = self.onClose
         DispatchQueue.main.async {
             onClose?()

@@ -38,7 +38,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         self.parseArguments()
         self.parseVersion()
-        self.setup {
+        self.setup { [weak self] in
+            guard let self else { return }
             modules.reversed().forEach{ $0.mount() }
             self.showSettingsIfNoActiveWidgets()
         }

@@ -17,6 +17,9 @@ class ApplicationSettings: NSStackView {
         get { Store.shared.string(key: "temperature_units", defaultValue: "system") }
         set { Store.shared.set(key: "temperature_units", value: newValue) }
     }
+    private var appVersion: String {
+        Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? localizedString("Unknown")
+    }
     
     private var startAtLoginBtn: NSSwitch?
     
@@ -100,11 +103,20 @@ class ApplicationSettings: NSStackView {
         statsName.font = NSFont.systemFont(ofSize: 20, weight: .regular)
         statsName.stringValue = "MemoryBar"
         statsName.isSelectable = true
+
+        let versionLabel: NSTextField = TextView(frame: NSRect(x: 0, y: 0, width: view.frame.width, height: 16))
+        versionLabel.alignment = .center
+        versionLabel.font = NSFont.systemFont(ofSize: 11, weight: .regular)
+        versionLabel.textColor = .secondaryLabelColor
+        versionLabel.stringValue = "v\(self.appVersion)"
+        versionLabel.isSelectable = true
         
         container.addRow(with: [iconView])
         container.addRow(with: [statsName])
+        container.addRow(with: [versionLabel])
         
         container.row(at: 1).height = 22
+        container.row(at: 2).height = 16
         
         view.addArrangedSubview(container)
         
