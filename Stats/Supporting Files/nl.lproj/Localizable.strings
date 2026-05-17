@@ -1,6 +1,6 @@
 //
 //  Localizable.strings
-//  Stats
+//  MemoryBar
 //
 //  Created by Phúc Ngô on 02/04/2021.
 //
@@ -27,16 +27,15 @@
 "Bluetooth" = "Bluetooth";
 "Open Bluetooth settings" = "Open bluetooth instellingen";
 "Clock" = "Klok";
-"Open Clock settings" = "Open klokinstellingen"; // gemma4:31b
+"Open Clock settings" = "Open de instellingen voor de klok"; // translategemma:4b
 
 // Words
 "Unknown" = "Onbekend";
-"Version" = "Versie";
 "Processor" = "Processor";
 "Memory" = "Geheugen";
 "Graphics" = "Grafiek";
 "Close" = "Sluiten";
-"Download" = "Downloaden"; // gemma4:31b
+"Download" = "Download";
 "Install" = "Installeren";
 "Cancel" = "Annuleren";
 "Unavailable" = "Onbereikbaar";
@@ -45,7 +44,7 @@
 "Automatic" = "Automatisch";
 "Manual" = "Handmatig";
 "None" = "Geen";
-"Dots" = "Stippen"; // gemma4:31b
+"Dots" = "Punten"; // translategemma:4b
 "Arrows" = "Pijlen";
 "Characters" = "Tekens";
 "Short" = "Kort";
@@ -68,8 +67,8 @@
 "Cube" = "Kubiek";
 "Logarithmic" = "Logaritmisch"; // translategemma:4b
 "Fixed scale" = "Vaste schaal";
-"Cores" = "Kernen"; // gemma4:31b
-"Core" = "Kern"; // gemma4:31b
+"Cores" = "Cores";
+"Core" = "Core";
 "Settings" = "Instellingen"; // translategemma:4b
 "Name" = "Naam"; // translategemma:4b
 "Format" = "Formaat"; // translategemma:4b
@@ -81,14 +80,16 @@
 "2 minutes" = "2 minuten"; // translategemma:4b
 "3 minutes" = "3 minuten"; // translategemma:4b
 "10 minutes" = "10 minuten"; // translategemma:4b
-"Separator" = "Scheider"; // gemma4:31b
-"Read" = "Lezen"; // gemma4:31b
-"Write" = "Schrijven"; // gemma4:31b
+"Import" = "Importeren"; // translategemma:4b
+"Export" = "Exporteren";
+"Separator" = "Scheiding"; // translategemma:4b
+"Read" = "Lees"; // translategemma:4b
+"Write" = "Schrijf"; // translategemma:4b
 "Frequency" = "Frequentie"; // translategemma:4b
 "Save" = "Opslaan"; // translategemma:4b
 "Run" = "Uitvoeren"; // translategemma:4b
 "Stop" = "Stoppen"; // translategemma:4b
-"Uninstall" = "Deinstalleren"; // gemma4:31b
+"Uninstall" = "Verwijderen"; // translategemma:4b
 "1 sec" = "1 seconde"; // translategemma:4b
 "2 sec" = "2 seconden"; // translategemma:4b
 "3 sec" = "3 seconden"; // translategemma:4b
@@ -101,7 +102,7 @@
 "Enable" = "Inschakelen"; // qwen3.8:27b
 
 // Setup
-"Stats Setup" = "Stats Installatie";
+"MemoryBar Setup" = "MemoryBar Installatie";
 "Previous" = "Vorige"; // translategemma:4b
 "Previous page" = "Vorige pagina"; // translategemma:4b
 "Next" = "Volgende"; // translategemma:4b
@@ -138,8 +139,6 @@
 
 // Settings
 "Open Activity Monitor" = "Open Activiteitenweergave";
-"Report a bug" = "Meld een bug";
-"Support the application" = "Ondersteun de applicatie";
 "Close application" = "Applicatie sluiten";
 "Open application settings" = "Open de applicatie-instellingen";
 "Open dashboard" = "Dashboard openen"; // translategemma:4b
@@ -150,17 +149,15 @@
 "Close module settings" = "Moduleinstellingen sluiten"; // qwen3.8:27b
 
 // Application settings
-"Check for updates" = "Controleer op updates";
+"Update application" = "Applicatie bijwerken";
 "At start" = "Bij het opstarten";
 "Once per day" = "Eenmaal per dag";
 "Once per week" = "Eenmaal per week";
 "Once per month" = "Eenmaal per maand";
 "Never" = "Nooit";
-"Check for update" = "Controleer op updates";
 "Show icon in dock" = "Pictogram in dock weergeven";
 "Start at login" = "Starten bij inloggen";
-"Build number" = "Buildnummer"; // gemma4:31b
-"Import settings" = "Importeer instellingen"; // gemma4:31b
+"Import settings" = "Importer instellingen"; // translategemma:4b
 "Export settings" = "Exporteer instellingen";
 "Reset settings" = "Instellingen resetten"; // gemma4:31b
 "Pause the Stats" = "Pauzeer de Stats"; // gemma4:31b
@@ -181,9 +178,9 @@
 "Number of threads" = "%0 draaden"; // qwen3.8:27b
 "Number of e-cores" = "%0 efficiëntiecores";
 "Number of p-cores" = "%0 prestatiecores";
-"Number of s-cores" = "%0 superkernen"; // gemma4:31b
+"Number of s-cores" = "%0 supercores"; // translategemma:4b
 "Disks" = "Schijven"; // translategemma:4b
-"Display" = "Scherm"; // gemma4:31b
+"Display" = "Weergave"; // translategemma:4b
 
 // Update
 "The latest version of Stats installed" = "De laatste versie van Stats is geïnstalleerd.";
@@ -204,6 +201,7 @@
 "Colorize" = "Inkleuren";
 "Colorize value" = "Waarde inkleuren";
 "Additional information" = "Extra informatie";
+"Reverse values order" = "Waarden in omgekeerde volgorde";
 "Base" = "Basis";
 "Display mode" = "Weergavemodus";
 "One row" = "Een rij";
@@ -217,11 +215,11 @@
 "Battery widget" = "Batterijwidget";
 "Stack widget" = "Stapel"; // translategemma:4b
 "Memory widget" = "Geheugenwidget";
-"Static width" = "Statische breedte"; // gemma4:31b
-"Tachometer widget" = "Toerenteller"; // gemma4:31b
-"State widget" = "Status-widget"; // gemma4:31b
+"Static width" = "Vaste breedte"; // translategemma:4b
+"Tachometer widget" = "Snelheidsmeter"; // translategemma:4b
+"State widget" = "Statuswidget"; // translategemma:4b
 "Text widget" = "Tekstwidget"; // translategemma:4b
-"Battery details widget" = "Widget voor batterijdetails"; // gemma4:31b
+"Battery details widget" = "Widget met batterijgegevens"; // translategemma:4b
 "Show symbols" = "Toon symbolen";
 "Label widget" = "Label";
 "Number of reads in the chart" = "Aantal keer gelezen in de grafiek";
@@ -229,9 +227,9 @@
 "Color of upload" = "Kleur voor upload";
 "Monospaced font" = "Monospaced lettertype";
 "Reverse order" = "Omgekeerde volgorde"; // translategemma:4b
-"Chart history" = "Grafiekgeschiedenis"; // gemma4:31b
+"Chart history" = "Historie van de grafiek"; // translategemma:4b
 "Default color" = "Standaard"; // translategemma:4b
-"Transparent when no activity" = "Transparant bij geen activiteit"; // gemma4:31b
+"Transparent when no activity" = "Transparant wanneer er geen activiteit is"; // translategemma:4b
 "Constant color" = "Vaste kleur";
 "Custom..." = "Aangepast...";
 
@@ -250,7 +248,7 @@
 "No available widgets to configure" = "Geen beschikbare widgets om te configureren";
 "No options to configure for the popup in this module" = "Geen opties in te stellen voor de pop-up in deze module";
 "Process" = "Proces"; // translategemma:4b
-"Kill process" = "Proces beëindigen"; // gemma4:31b
+"Kill process" = "Beëindig proces"; // translategemma:4b
 "Keyboard shortcut" = "Sneltoets"; // translategemma:4b
 "Listening..." = "Luisteren..."; // translategemma:4b
 "Open in browser" = "Openen in browser"; // qwen3.8:27b
@@ -261,8 +259,8 @@
 "Update interval for top processes" = "Bijwerkingsinterval voor topprocessen";
 "Chart color" = "Grafiekkleur";
 "Main chart scaling" = "Schaal van algemene grafiek";
-"Scale value" = "Schaalwaarde"; // gemma4:31b
-"Text widget value" = "Waarde van de tekstwidget"; // gemma4:31b
+"Scale value" = "Waarde"; // translategemma:4b
+"Text widget value" = "Waarde van het tekstwidget-element"; // translategemma:4b
 "Combined processes" = "Gecombineerde processen"; // translategemma:4b
 
 // CPU
@@ -281,14 +279,15 @@
 "1 minute" = "1 minuut";
 "5 minutes" = "5 minuten";
 "15 minutes" = "15 minuten";
-"CPU usage threshold" = "Drempelwaarde CPU-gebruik"; // gemma4:31b
+"CPU usage threshold" = "Drempelwaarde voor CPU-gebruik"; // translategemma:4b
+"CPU usage is" = "Het CPU-gebruik is %0"; // translategemma:4b
 "Efficiency cores" = "Efficiëntiecores";
 "Performance cores" = "Prestatiecores";
 "Super cores" = "Superkernen"; // qwen3.8:27b
 "System color" = "Kleur voor systeembelasting";
 "User color" = "Kleur voor gebruikersbelasting";
 "Idle color" = "Kleur voor inactief";
-"Cluster grouping" = "Clustergroepering"; // gemma4:31b
+"Cluster grouping" = "Groeperen van clusters"; // translategemma:4b
 "Efficiency cores color" = "Kleur voor efficiëntiecores";
 "Performance cores color" = "Kleur voor prestatiecores";
 "Super cores color" = "Superkernenkleur"; // qwen3.8:27b
@@ -307,9 +306,18 @@
 // GPU
 "GPU to show" = "GPU om te laten zien";
 "Show GPU type" = "GPU-type weergeven";
+"GPU enabled" = "GPU ingeschakeld";
+"GPU disabled" = "GPU uitgeschakeld";
+"GPU temperature" = "GPU-temperatuur";
 "GPU utilization" = "GPU-gebruik";
+"Vendor" = "Fabrikant";
 "Model" = "Model";
 "Status" = "Status";
+"Active" = "Actief";
+"Non active" = "Niet actief";
+"Fan speed" = "Ventilatorsneelheid";
+"Core clock" = "Core klok";
+"Memory clock" = "Geheugen klok";
 "Utilization" = "Gebruik";
 "Renderer utilization" = "Render-gebruik"; // gemma4:31b
 "Renderer utilization history" = "Renderbenuttinggeschiedenis"; // qwen3.8:27b
@@ -327,14 +335,14 @@
 "Memory pressure" = "Geheugendruk";
 "Total" = "Totaal";
 "Used" = "Gebruikt";
-"App" = "Apps"; // gemma4:31b
-"Wired" = "Vastgezet"; // gemma4:31b
+"App" = "App";
+"Wired" = "Bedraad"; // translategemma:4b
 "Compressed" = "Gecomprimeerd";
 "Free" = "Vrij";
 "Swap" = "Swap";
 "Split the value (App/Wired/Compressed)" = "Splits waarden (App/Wired/Gecomprimeerd)";
-"RAM utilization threshold" = "Drempelwaarde RAM-gebruik"; // gemma4:31b
-"RAM utilization is" = "RAM-gebruik is %0"; // gemma4:31b
+"RAM utilization threshold" = "Drempelwaarde voor het gebruik van RAM"; // translategemma:4b
+"RAM utilization is" = "Het gebruik van RAM bedraagt %0"; // translategemma:4b
 "App color" = "Kleur voor app";
 "Wired color" = "Kleur voor vastgezet";
 "Compressed color" = "Kleur voor gecomprimeerd";
@@ -352,18 +360,15 @@
 "Disk to show" = "Schijf om te laten zien";
 "Open disk" = "Open schijf";
 "Switch view" = "Wissel weergave";
-"Disk utilization threshold" = "Drempelwaarde voor schijfgebruik"; // gemma4:31b
-"Disk utilization is" = "Schijfgebruik is %0"; // gemma4:31b
+"Disk utilization threshold" = "Drempelwaarde voor het gebruik van schijfruimte"; // translategemma:4b
+"Disk utilization is" = "Het gebruik van de schijf is %0"; // translategemma:4b
 "Read color" = "Kleur voor lezen";
 "Write color" = "Kleur voor schrijven";
-"Disk usage" = "Schijfgebruik"; // gemma4:31b
+"Disk usage" = "Gebruikte schijfruimte"; // translategemma:4b
 "Total read" = "Totaal gelezen"; // translategemma:4b
 "Total written" = "Totaal geschreven";
-"File system" = "Bestandssysteem"; // gemma4:31b-it-qat
-"Connection type" = "Verbindingstype"; // gemma4:31b-it-qat
-"BSD name" = "BSD-naam"; // gemma4:31b-it-qat
-"Encrypted" = "Versleuteld"; // gemma4:31b-it-qat
-"Writable" = "Schrijfbaar"; // gemma4:31b-it-qat
+"Write speed" = "Schrijfsnelheid";
+"Read speed" = "Leessnelheid";
 "Drives" = "Schijven"; // translategemma:4b
 "Power cycles" = "Aantal cycli"; // gemma4:31b
 "Power on hours" = "Uren ingeschakeld"; // gemma4:31b
@@ -385,6 +390,7 @@
 "removable" = "verwijderbaar"; // qwen3.8:27b
 
 // Sensors
+"Temperature unit" = "Temperatuureenheid";
 "Celsius" = "Celsius";
 "Fahrenheit" = "Fahrenheit";
 "Save the fan speed" = "Sla de ventilatorsnelheid op"; // gemma4:31b
@@ -419,6 +425,11 @@
 "Interface" = "Interface";
 "Physical address" = "Fysiek adres";
 "Refresh" = "Ververs";
+"Click to copy public IP address" = "Klik om openbaar IP-adres te kopiëren";
+"Click to copy local IP address" = "Klik om lokaal IP-adres te kopiëren";
+"Click to copy wifi name" = "Klik om wifi-naam te kopiëren";
+"Click to copy mac address" = "Klik om mac-adres te kopiëren";
+"No connection" = "Geen verbinding";
 "Network interface" = "Netwerk interface";
 "Total download" = "Totaal download";
 "Total upload" = "Totaal upload";
@@ -430,9 +441,12 @@
 "Standard" = "Standaard"; // translategemma:4b
 "Security" = "Beveiliging"; // translategemma:4b
 "Channel" = "Kanaal"; // translategemma:4b
+"Common scale" = "Algemene schaal";
 "Autodetection" = "Automatische detectie"; // translategemma:4b
 "Widget activation threshold" = "Drempelwaarde voor het activeren van een widget"; // translategemma:4b
 "Internet connection" = "Internetverbinding"; // translategemma:4b
+"Active state color" = "Kleur voor de actieve toestand";
+"Nonactive state color" = "Kleur voor de niet-actieve toestand"; // translategemma:4b
 "Connectivity host" = "Host voor verbinding"; // translategemma:4b
 "Leave empty to disable the check" = "Laat dit veld leeg, om de controle uit te schakelen.";
 "Connectivity history" = "Verbindingshistorie";
@@ -440,8 +454,11 @@
 "Every hour" = "Elk uur";
 "Every 12 hours" = "Elke 12 uur"; // translategemma:4b
 "Every 24 hours" = "Elke 24 uur"; // translategemma:4b
+"Network activity" = "Netwerkactiviteit"; // translategemma:4b
 "Last reset" = "Laatste reset %0 geleden"; // translategemma:4b
 "Latency" = "Vertraging"; // translategemma:4b
+"Upload speed" = "Uploadsnelheid";
+"Download speed" = "Downloadsnelheid";
 "Address" = "Adres"; // translategemma:4b
 "WiFi network" = "WiFi-netwerk"; // translategemma:4b
 "Local IP changed" = "Het lokale IP-adres is veranderd"; // translategemma:4b
@@ -460,6 +477,7 @@
 "This will be visible in the text widget" = "Dit zal zichtbaar zijn in de tekstwidget"; // qwen3.8:27b
 
 // Battery
+"Level" = "Niveau";
 "Source" = "Bron";
 "AC Power" = "Wisselstroom";
 "Battery Power" = "Batterijvermogen";
@@ -475,6 +493,7 @@
 "Time to charge" = "Tijd tot opgeladen";
 "Calculating" = "Berekenen";
 "Fully charged" = "Volledig opgeladen";
+"Not connected" = "Niet verbonden";
 "Low level notification" = "Melding laag niveau";
 "High level notification" = "Melding hoog niveau";
 "Low battery" = "Bijna lege batterij";
@@ -486,7 +505,14 @@
 "Time and percentage" = "Tijd en percentage";
 "Time format" = "Tijdsnotatie";
 "Hide additional information when full" = "Verberg aanvullende informatie wanneer batterij vol is";
+"Last charge" = "Laatste oplading";
+"Capacity" = "Capaciteit"; // translategemma:4b
+"current / maximum / designed" = "huidig / maximum / ontworpen"; // translategemma:4b
+"Low power mode" = "Modus met laag stroomverbruik";
 "Percentage inside the icon" = "Percentage binnen het icoon"; // translategemma:4b
+"Colorize battery" = "Batterij kleuren";
+"Charging current" = "Laadstroom"; // translategemma:4b
+"Charging Voltage" = "Laadspanning"; // translategemma:4b
 "Charger state inside the battery" = "Status van de oplaadunit binnenin de batterij"; // translategemma:4b
 "Max capacity" = "Maximale capaciteit"; // qwen3.8:27b
 "Designed capacity" = "Ontworpen capaciteit"; // qwen3.8:27b
@@ -497,6 +523,7 @@
 "Level" = "Niveau"; // qwen3.8:27b
 
 // Bluetooth
+"Battery to show" = "Laadstatus weergeven"; // translategemma:4b
 "No Bluetooth devices are available" = "Er zijn geen Bluetooth-apparaten beschikbaar."; // translategemma:4b
 "Bluetooth threshold" = "Bluetooth-drempelwaarde"; // qwen3.8:27b
 

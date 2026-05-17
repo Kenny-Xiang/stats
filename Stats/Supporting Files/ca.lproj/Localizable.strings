@@ -1,6 +1,6 @@
 //
 //  Localizable.strings
-//  Stats
+//  MemoryBar
 //
 //  Created by David Alonso (davidalonso) on 25/11/2021.
 //  Using Swift 5.0.
@@ -31,7 +31,6 @@
 
 // Words
 "Unknown" = "Desconegut";
-"Version" = "Versió";
 "Processor" = "Processador";
 "Memory" = "Memòria";
 "Graphics" = "Gràfics";
@@ -58,6 +57,7 @@
 "Center alignment" = "Centre";
 "Right alignment" = "Dreta";
 "Dashboard" = "Panell";
+"Enabled" = "Activat";
 "Disabled" = "Desactivat";
 "Silent" = "Silenci";
 "Units" = "Unitats";
@@ -69,7 +69,7 @@
 "Logarithmic" = "Logarítmic";
 "Fixed scale" = "Escala fixa";
 "Cores" = "Nuclis";
-"Core" = "Nucli"; // gemma4:31b
+"Core" = "Núcle"; // translategemma:4b
 "Settings" = "Configuració";
 "Name" = "Nom";
 "Format" = "Format";
@@ -81,13 +81,15 @@
 "2 minutes" = "2 minuts";
 "3 minutes" = "3 minuts";
 "10 minutes" = "10 minuts";
+"Import" = "Importar";
+"Export" = "Exportar";
 "Separator" = "Separador"; // translategemma:4b
-"Read" = "Lectura"; // gemma4:31b
-"Write" = "Escritura"; // gemma4:31b
-"Frequency" = "Freqüència"; // gemma4:31b
-"Save" = "Desa"; // gemma4:31b
+"Read" = "Llegeix"; // translategemma:4b
+"Write" = "Escriure"; // translategemma:4b
+"Frequency" = "Frecència"; // translategemma:4b
+"Save" = "Guarda"; // translategemma:4b
 "Run" = "Executar"; // translategemma:4b
-"Stop" = "Aturar"; // gemma4:31b
+"Stop" = "Atura"; // translategemma:4b
 "Uninstall" = "Desinstal·lar"; // translategemma:4b
 "1 sec" = "1 s"; // gemma4:31b
 "2 sec" = "2 seg"; // gemma4:31b
@@ -101,45 +103,30 @@
 "Enable" = "Activa"; // qwen3.8:27b
 
 // Setup
-"Stats Setup" = "Configuració de Stats";
+"MemoryBar Setup" = "Configuració de MemoryBar";
 "Previous" = "Previ";
 "Previous page" = "Pàgina prèvia";
 "Next" = "Següent";
 "Next page" = "pàgina següent";
 "Finish" = "Finalitzar";
 "Finish setup" = "Finalitzar configuració";
-"Welcome to Stats" = "Benvingut/Benvinguda a Stats";
-"welcome_message" = "Gràcies per fer servir Stats, una aplicació de monitorització per a la teva barra de menús de macOS de codi lliure.";
-"Select preset" = "Selecciona la preconfiguració"; // gemma4:31b
-"select_preset_message" = "Tria un conjunt inicial de mòduls. Pots personalitzar-ho tot més tard als Ajustos."; // gemma4:31b
-"Default" = "Per defecte"; // gemma4:31b
-"Basic" = "Bàsic"; // gemma4:31b
-"Recommended" = "Recomanat"; // gemma4:31b
-"Extended" = "Estès"; // gemma4:31b
+"Welcome to MemoryBar" = "Benvingut/Benvinguda a MemoryBar";
+"welcome_message" = "Gràcies per fer servir MemoryBar, una aplicació de monitorització per a la teva barra de menús de macOS de codi lliure.";
 "Start the application automatically when starting your Mac" = "Iniciar automàticament l'aplicació al iniciar el teu Mac";
 "Do not start the application automatically when starting your Mac" = "No iniciar automàticament l'aplicació al iniciar el teu Mac";
-"Do everything silently in the background (recommended)" = "Fer tot silenciosament al radere (recomanat)";
-"Check for a new version on startup" = "Comprovar noves versions al iniciar";
-"Check for a new version every day (once a day)" = "Comprovar noves versions cada dia (una vegada al dia)";
-"Check for a new version every week (once a week)" = "Comprovar noves versions cada setmana (una vegada a la setmana)";
-"Check for a new version every month (once a month)" = "Comprovar noves versions cada mes (una vegada al mes)";
-"Never check for updates (not recommended)" = "No comprovar mai noves versions (no recomanat)";
-"The configuration is completed" = "La configuració s'ha completat"; // gemma4:31b
-"finish_setup_message" = "Tot està configurat! \n Stats és una eina de codi lliure, és gratuït i sempre ho serà. \n Si el gaudeixes pots contribuir al projecte, sempre és benvingut!";
+"Anonymous telemetry for better development decisions" = "Telemetria anònima per proporcionar millors decisions pels desenvolupadors";
+"Share anonymous telemetry data" = "Compartir telemetria anònima";
+"Do not share anonymous telemetry data" = "No compartir telemetria anònima";
+"The configuration is completed" = "La configuració ha estat finalitzada"; // translategemma:4b
+"finish_setup_message" = "MemoryBar is ready.";
 
 // Alerts
-"New version available" = "Nova versió disponible";
-"Click to install the new version of Stats" = "Clica per a instal·lar la nova versió d'Stats";
-"Successfully updated" = "Actualització completada amb èxit";
-"Stats was updated to v" = "Stats s'ha actualitzat a v%0";
 "Reset settings text" = "Tota la configuració actual serà esborrada i l'aplicació es reiniciarà. Estàs segur/segura de voler fer això?";
 "Deregister text" = "L'ordinador serà desregistrat de System Stats i tancaràs la sessió. Estàs segur que vols fer això?"; // gemma4:31b-it-qat
 "Support text" = "Gràcies per utilitzar Stats!\n\n Mantenir i millorar aquest projecte de codi obert requereix temps i recursos. El vostre suport ens ajuda a continuar oferint una aplicació gratuïta i fiable per a tothom.\n\nSi trobeu Stats útil, penseu a fer una contribució. Cada petita mica ajuda!";
 
 // Settings
 "Open Activity Monitor" = "Obre el Visor d'Activitat";
-"Report a bug" = "Reporta un problema";
-"Support the application" = "Suporta l'aplicació";
 "Close application" = "Tanca l'aplicació";
 "Open application settings" = "Obre la configuració de l'aplicació";
 "Open dashboard" = "Obre el panell";
@@ -150,23 +137,17 @@
 "Close module settings" = "Tancar la configuració del mòdul"; // qwen3.8:27b
 
 // Application settings
-"Check for updates" = "Busca actualitzacions";
+"Update application" = "Actualitza l'aplicació";
 "At start" = "A l'inici";
 "Once per day" = "Un cop al dia";
 "Once per week" = "Un cop per setmana";
 "Once per month" = "Un cop al mes";
 "Never" = "Mai";
-"Check for update" = "Busca actualitzacions";
 "Show icon in dock" = "Mostra l'icona al Dock";
 "Start at login" = "Arranca al iniciar sessió";
-"Build number" = "Número de Build";
 "Import settings" = "Importa configuració";
 "Export settings" = "Exporta configuració";
 "Reset settings" = "Reinicia configuració";
-"Pause the Stats" = "Pausa Stats";
-"Resume the Stats" = "Continua Stats";
-"Combined modules" = "Mòduls combinats";
-"Combined details" = "Detalls combinats";
 "Spacing" = "Espaiat";
 "Choose file" = "Tria el fitxer"; // gemma4:31b
 "Stress tests" = "Proves d'estress"; // gemma4:31b
@@ -204,6 +185,7 @@
 "Colorize" = "Acoloreix";
 "Colorize value" = "Valor de l'acoloriment";
 "Additional information" = "Informació addicional";
+"Reverse values order" = "Invertir l'ordre dels valors";
 "Base" = "Base";
 "Display mode" = "Mode de visualització";
 "One row" = "Una fila";
@@ -220,7 +202,7 @@
 "Static width" = "Ample fix";
 "Tachometer widget" = "Tacòmetre";
 "State widget" = "Widget d'estat"; // translategemma:4b
-"Text widget" = "Widget de text"; // gemma4:31b
+"Text widget" = "Element de text"; // translategemma:4b
 "Battery details widget" = "Widget de detalls de la bateria"; // translategemma:4b
 "Show symbols" = "Mostra els símbols";
 "Label widget" = "Etiqueta";
@@ -244,14 +226,14 @@
 "Pictogram" = "Pictograma";
 "Module" = "Mòdul";
 "Widgets" = "Ginys";
-"Popup" = "Finestra emergent"; // gemma4:31b
+"Popup" = "Finestra emergència"; // translategemma:4b
 "Notifications" = "Notificacions";
 "Merge widgets" = "Combina ginys";
 "No available widgets to configure" = "No hi ha widgets disponibles per configurar";
 "No options to configure for the popup in this module" = "No hi ha opcions per configurar per a la finestra emergent en aquest mòdul";
 "Process" = "Procés";
 "Kill process" = "Tanca procés";
-"Keyboard shortcut" = "Combinació de tecles"; // gemma4:31b
+"Keyboard shortcut" = "Atall de teclat"; // translategemma:4b
 "Listening..." = "Escoltant..."; // translategemma:4b
 "Open in browser" = "Obre al navegador"; // qwen3.8:27b
 "Open module" = "Obrir mòdul"; // qwen3.8:27b
@@ -259,6 +241,7 @@
 // Modules
 "Number of top processes" = "Nombre de processos principals";
 "Update interval for top processes" = "Freqüència de refresc per als processos principals";
+"Notification level" = "Nivell de notificació";
 "Chart color" = "Color del gràfic";
 "Main chart scaling" = "Escala del gràfic principal";
 "Scale value" = "Valor d'escala";
@@ -282,6 +265,7 @@
 "5 minutes" = "5 minuts";
 "15 minutes" = "15 minuts";
 "CPU usage threshold" = "Límit d'ús de la CPU";
+"CPU usage is" = "L'ús de la CPU és %0";
 "Efficiency cores" = "Nuclis d'eficiència";
 "Performance cores" = "Nuclis de rendiment";
 "Super cores" = "Super nuclis"; // qwen3.8:27b
@@ -307,9 +291,18 @@
 // GPU
 "GPU to show" = "GPU a mostrar";
 "Show GPU type" = "Mostra el tipus de GPU";
+"GPU enabled" = "GPU activada";
+"GPU disabled" = "GPU desactivada";
+"GPU temperature" = "Temperatura de la GPU";
 "GPU utilization" = "Ús de la GPU";
+"Vendor" = "Fabricant";
 "Model" = "Model";
 "Status" = "Estat";
+"Active" = "Activa";
+"Non active" = "Inactiva";
+"Fan speed" = "Velocitat del ventilador";
+"Core clock" = "Rellotge del nucli";
+"Memory clock" = "Rellotge de la memòria";
 "Utilization" = "Ús";
 "Renderer utilization" = "Utilització del Render";
 "Renderer utilization history" = "Historial d'ús de renderització"; // qwen3.8:27b
@@ -359,11 +352,8 @@
 "Disk usage" = "Ús del disc";
 "Total read" = "Total llegit";
 "Total written" = "Total escrit";
-"File system" = "Sistema de fitxers"; // gemma4:31b-it-qat
-"Connection type" = "Tipus de connexió"; // gemma4:31b-it-qat
-"BSD name" = "Nom BSD"; // gemma4:31b-it-qat
-"Encrypted" = "Xifrat"; // gemma4:31b-it-qat
-"Writable" = "Escriptible"; // gemma4:31b-it-qat
+"Write speed" = "Velocitat de escriptura";
+"Read speed" = "Velocitat de lectura";
 "Drives" = "Discos"; // translategemma:4b
 "Power cycles" = "Cicles d'alimentació"; // gemma4:31b
 "Power on hours" = "Hores de funcionament"; // gemma4:31b
@@ -385,6 +375,7 @@
 "removable" = "amovible"; // qwen3.8:27b
 
 // Sensors
+"Temperature unit" = "Unitat de temperatura";
 "Celsius" = "Celsius";
 "Fahrenheit" = "Fahrenheit"; // translategemma:4b
 "Save the fan speed" = "Guarda la velocitat del ventilador";
@@ -409,7 +400,7 @@
 "Left fan" = "Ventilador esquerre";
 "Right fan" = "Ventilador dret";
 "Fastest fan" = "Ventilador més ràpid";
-"Sensor to show" = "Sensor a mostrar"; // gemma4:31b
+"Sensor to show" = "Sensor per mostrar"; // translategemma:4b
 
 // Network
 "Uploading" = "Carregant";
@@ -419,6 +410,11 @@
 "Interface" = "Interfície";
 "Physical address" = "Direcció física";
 "Refresh" = "Actualitza";
+"Click to copy public IP address" = "Clica per a copiar la direcció IP pública";
+"Click to copy local IP address" = "Clica per a copiar la direcció IP local";
+"Click to copy wifi name" = "Clica per a copiar el nom de la xarxa WiFi";
+"Click to copy mac address" = "Clica per a copiar la direcció MAC";
+"No connection" = "Sense connexió";
 "Network interface" = "Interfície de xarxa";
 "Total download" = "Baixada total";
 "Total upload" = "Càrrega total";
@@ -430,9 +426,12 @@
 "Standard" = "Estàndar";
 "Security" = "Seguretat";
 "Channel" = "Canal";
+"Common scale" = "Escala comuna";
 "Autodetection" = "Autodetecció";
 "Widget activation threshold" = "Límit d'activació del giny";
 "Internet connection" = "Connexió a internet";
+"Active state color" = "Color per l'estat actiu";
+"Nonactive state color" = "Color per l'estat inactiu";
 "Connectivity host" = "Connectivitat host";
 "Leave empty to disable the check" = "Deixa en blanc per desactivar la comprovació";
 "Connectivity history" = "Historial de connectivitat";
@@ -440,13 +439,16 @@
 "Every hour" = "Cada hora";
 "Every 12 hours" = "Cada 12 hores";
 "Every 24 hours" = "Cada 24 hores";
+"Network activity" = "Activitat de la xarxa";
 "Last reset" = "L'últim reinici va ser fa %0";
 "Latency" = "Latència";
+"Upload speed" = "Velocitat de pujada";
+"Download speed" = "Velocitat de baixada";
 "Address" = "Adreça"; // translategemma:4b
-"WiFi network" = "Xarxa WiFi"; // gemma4:31b
-"Local IP changed" = "L'IP local ha canviat"; // gemma4:31b
-"Public IP changed" = "L'IP pública ha canviat"; // gemma4:31b
-"Previous IP" = "IP anterior: %0"; // gemma4:31b
+"WiFi network" = "Xarxa Wi-Fi"; // translategemma:4b
+"Local IP changed" = "La direcció IP local s'ha modificat"; // translategemma:4b
+"Public IP changed" = "La direcció IP pública ha canviat."; // translategemma:4b
+"Previous IP" = "Adreça IP anterior: %0"; // translategemma:4b
 "New IP" = "Nova IP: %0"; // translategemma:4b
 "Internet connection lost" = "Connexió a Internet perduda"; // gemma4:31b
 "Internet connection established" = "Connexió a internet establida"; // gemma4:31b
@@ -460,6 +462,7 @@
 "This will be visible in the text widget" = "Això serà visible al widget de text"; // qwen3.8:27b
 
 // Battery
+"Level" = "Nivell";
 "Source" = "Font";
 "AC Power" = "Alimentació";
 "Battery Power" = "Alimentat per bateria";
@@ -475,6 +478,7 @@
 "Time to charge" = "Temps fins la càrrega completa";
 "Calculating" = "Calculant";
 "Fully charged" = "Completament carregada";
+"Not connected" = "No connectat";
 "Low level notification" = "Notificació de nivell baix";
 "High level notification" = "Notificació de nivell alt";
 "Low battery" = "Bateria baixa";
@@ -486,6 +490,10 @@
 "Time and percentage" = "Temps i percentatge";
 "Time format" = "Format de temps";
 "Hide additional information when full" = "Oculta informació addicional quan la bateria estigui carregada";
+"Last charge" = "Última càrrega";
+"Capacity" = "Capacitat";
+"current / maximum / designed" = "actual / màxima / dissenyada";
+"Low power mode" = "Mode de baix consum";
 "Percentage inside the icon" = "Percentatge dins de la icona";
 "Charger state inside the battery" = "Estat de càrrega dins de la bateria"; // gemma4:31b
 "Max capacity" = "Capacitat màxima"; // gemma4:31b
@@ -504,14 +512,12 @@
 "Time zone" = "Zona horària";
 "Local" = "Local";
 "Calendar" = "Calendari";
-"Show week numbers" = "Mostrar els números de setmana"; // gemma4:31b
+"Show week numbers" = "Mostrar els números de la setmana"; // translategemma:4b
 "Local time" = "Hora local";
-"Add new clock" = "Afegir nou rellotge"; // gemma4:31b
-"Delete selected clock" = "Eliminar el rellotge seleccionat"; // gemma4:31b
+"Add new clock" = "Afegir un nou rellotge"; // translategemma:4b
+"Delete selected clock" = "Eliminar l'horari seleccionat"; // translategemma:4b
 "Help with datetime format" = "Ajuda amb el format de data i hora"; // translategemma:4b
-"Sync with NTP server" = "Sincronització amb el servidor NTP"; // gemma4:31b
-"Previous month" = "Mes anterior"; // gemma4:31b
-"Next month" = "El proper mes"; // gemma4:31b
+"Sync with NTP server" = "Sincronitza amb el servidor NTP"; // translategemma:4b
 
 // Colors
 "Based on utilization" = "Basat en l'utilització";

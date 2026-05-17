@@ -415,14 +415,29 @@ internal class HeaderView: NSStackView {
         settings.target = self
         settings.toolTip = localizedString("Open module")
         settings.focusRingType = .none
+
+        let quit = NSButtonWithPadding()
+        quit.frame = CGRect(x: 0, y: 0, width: 24, height: self.frame.height)
+        quit.horizontalPadding = activity.frame.height - 24
+        quit.bezelStyle = .regularSquare
+        quit.translatesAutoresizingMaskIntoConstraints = false
+        quit.imageScaling = .scaleNone
+        quit.image = iconFromSymbol(name: "power", scale: .large)
+        quit.contentTintColor = .lightGray
+        quit.isBordered = false
+        quit.action = #selector(self.closeApplication)
+        quit.target = self
+        quit.toolTip = localizedString("Close application")
+        quit.focusRingType = .none
         
         self.addArrangedSubview(activity)
         self.addArrangedSubview(title)
         self.addArrangedSubview(settings)
+        self.addArrangedSubview(quit)
         
         NSLayoutConstraint.activate([
             title.widthAnchor.constraint(
-                equalToConstant: self.frame.width - activity.intrinsicContentSize.width - settings.intrinsicContentSize.width
+                equalToConstant: self.frame.width - activity.intrinsicContentSize.width - settings.intrinsicContentSize.width - quit.intrinsicContentSize.width
             )
         ])
     }
@@ -483,6 +498,10 @@ internal class HeaderView: NSStackView {
     
     @objc func openSettings() {
         NotificationCenter.default.post(name: .toggleSettings, object: nil, userInfo: ["module": self.title])
+    }
+
+    @objc private func closeApplication(_ sender: Any?) {
+        NSApp.terminate(sender)
     }
     
     @objc private func closePopup() {

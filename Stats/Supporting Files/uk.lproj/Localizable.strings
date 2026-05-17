@@ -1,6 +1,6 @@
 //
 //  Localizable.strings
-//  Stats
+//  MemoryBar
 //
 //  Created by Serhiy Mytrovtsiy on 27/08/2020.
 //  Using Swift 5.0.
@@ -31,7 +31,6 @@
 
 // Words
 "Unknown" = "Невідомо";
-"Version" = "Версія";
 "Processor" = "Процесор";
 "Memory" = "Пам'ять";
 "Graphics" = "Графіка";
@@ -58,6 +57,7 @@
 "Center alignment" = "По центру";
 "Right alignment" = "Праворуч";
 "Dashboard" = "Головний екран"; // translategemma:4b
+"Enabled" = "Включено";
 "Disabled" = "Виключено";
 "Silent" = "Безшумно";
 "Units" = "Одиниці";
@@ -81,6 +81,8 @@
 "2 minutes" = "2 хвилини";
 "3 minutes" = "3 хвилини";
 "10 minutes" = "10 хвилин";
+"Import" = "Імпорт";
+"Export" = "Експорт";
 "Separator" = "Роздільник";
 "Read" = "Зчитування";
 "Write" = "Запис";
@@ -101,7 +103,7 @@
 "Enable" = "Увімкнути"; // qwen3.8:27b
 
 // Setup
-"Stats Setup" = "Налаштування";
+"MemoryBar Setup" = "Налаштування";
 "Previous" = "Попередня";
 "Previous page" = "Попередня сторінка";
 "Next" = "Наступна";
@@ -118,28 +120,17 @@
 "Extended" = "Розширений";
 "Start the application automatically when starting your Mac" = "Запускати програму автоматично під час запуску Mac";
 "Do not start the application automatically when starting your Mac" = "Не запускати програму автоматично під час запуску Mac";
-"Do everything silently in the background (recommended)" = "Робити усе у фоновому режимі (рекомендовано)";
-"Check for a new version on startup" = "Перевірти наявність нової версії під час запуску програми";
-"Check for a new version every day (once a day)" = "Щодня перевіряти наявність нової версії (один раз на день)";
-"Check for a new version every week (once a week)" = "Щотижня перевіряти наявність нової версії (раз на тиждень)";
-"Check for a new version every month (once a month)" = "Перевіряти наявність нової версії щомісяця (раз на місяць)";
-"Never check for updates (not recommended)" = "Ніколи не перевіряти наявність оновлень (не рекомендовано)";
+"Anonymous telemetry for better development decisions" = "Анонімна телеметрія для кращих рішень щодо програми";
+"Share anonymous telemetry data" = "Ділитись анонімними даними телеметрії";
+"Do not share anonymous telemetry data" = "Не передавати анонімні дані телеметрії";
 "The configuration is completed" = "Налаштування завершено";
-"finish_setup_message" = "Все налаштовано! \n Stats — це інструмент з відкритим вихідним кодом, він безкоштовний і таким завжди буде. \n Якщо вам це подобається ви можете підтримати проект, це завжди цінується!";
+"finish_setup_message" = "MemoryBar is ready.";
 
 // Alerts
-"New version available" = "Доступна нова версія";
-"Click to install the new version of Stats" = "Натисніть щоб встановити нову версію Stats";
-"Successfully updated" = "Успішно оновленно";
-"Stats was updated to v" = "Stats оновлено до v%0";
 "Reset settings text" = "Усі налаштування програми буде скинуто, і програма буде перезапущена. Ви впевнені, що хочете це зробити?";
-"Deregister text" = "Реєстрацію програми буде скасовано в System Stats, і ви вийдете з неї. Ви впевнені, що хочете це зробити?";
-"Support text" = "Дякуємо за використання Stats!\n\n Підтримка і вдосконалення цього проекту з відкритим вихідним кодом вимагає часу і ресурсів. Ваша підтримка допомагає нам продовжувати надавати безкоштовну і надійну програму для всіх.\n\nЯкщо ви вважаєте Stats корисною, будь ласка, зробіть свій внесок. Кожна копійка допомагає!";
 
 // Settings
 "Open Activity Monitor" = "Відкрити Монітор активності";
-"Report a bug" = "Повідомити про помилку";
-"Support the application" = "Підтримати програму";
 "Close application" = "Закрити програму";
 "Open application settings" = "Відкрити налаштування";
 "Open dashboard" = "Відкрити dashboard";
@@ -159,15 +150,11 @@
 "Check for update" = "Перевірити оновлення";
 "Show icon in dock" = "Показувати іконку в Dock";
 "Start at login" = "Запускати при логуванні";
-"Build number" = "Номер збірки";
 "Import settings" = "Імпорт налаштувань";
 "Export settings" = "Експорт налаштувань";
 "Reset settings" = "Скидання налаштувань";
-"Pause the Stats" = "Призупинити Stats";
-"Resume the Stats" = "Відновити Stats";
-"Combined modules" = "Комбіновані модулі";
-"Combined details" = "Комбіновані деталі";
 "Spacing" = "Інтервал";
+"Share anonymous telemetry" = "Ділитись анонімною телеметрією";
 "Choose file" = "Виберіть файл";
 "Stress tests" = "Стрес-тести";
 "Keep the menubar items position" = "Зберігати розташування елементів панелі меню"; // qwen3.8:27b
@@ -204,6 +191,7 @@
 "Colorize" = "Розфарбувати";
 "Colorize value" = "Розфарбувати значення";
 "Additional information" = "Додаткова інформація";
+"Reverse values order" = "Змінити порядок сортування";
 "Base" = "Основа";
 "Display mode" = "Режим відображення";
 "One row" = "Один ряд";
@@ -259,6 +247,7 @@
 // Modules
 "Number of top processes" = "Кількість процесів";
 "Update interval for top processes" = "Інтервал оновлення для процесів";
+"Notification level" = "Рівень сповіщення";
 "Chart color" = "Колір діаграми";
 "Main chart scaling" = "Масштабування основної діаграми";
 "Scale value" = "Значення масштабування";
@@ -282,6 +271,7 @@
 "5 minutes" = "5 хвилин";
 "15 minutes" = "15 хвилин";
 "CPU usage threshold" = "Поріг використання процесора";
+"CPU usage is" = "Використання процесора %0";
 "Efficiency cores" = "Енергоефективні ядра";
 "Performance cores" = "Високопродуктивні ядра";
 "Super cores" = "Суперядра"; // qwen3.8:27b
@@ -307,9 +297,18 @@
 // GPU
 "GPU to show" = "Активний графічний процесор";
 "Show GPU type" = "Показувати тип графічного процесора";
+"GPU enabled" = "Увімкнено";
+"GPU disabled" = "Вимкнено";
+"GPU temperature" = "Температура графічного процесора";
 "GPU utilization" = "Навантаженість графічного процесора";
+"Vendor" = "Постачальник";
 "Model" = "Модель";
 "Status" = "Статус";
+"Active" = "Активна";
+"Non active" = "Неактивна";
+"Fan speed" = "Швидкість вентилятора";
+"Core clock" = "Частота процесора";
+"Memory clock" = "Частота пам'яті";
 "Utilization" = "Використання";
 "Renderer utilization" = "Використання рендерера";
 "Renderer utilization history" = "Історія використання рендерера"; // qwen3.8:27b
@@ -359,11 +358,8 @@
 "Disk usage" = "Використання диска";
 "Total read" = "Всього прочитано";
 "Total written" = "Всього записано";
-"File system" = "Файлова система";
-"Connection type" = "Тип підключення";
-"BSD name" = "Назва BSD";
-"Encrypted" = "Шифрування";
-"Writable" = "Записуваний";
+"Write speed" = "Запис";
+"Read speed" = "Зчитування";
 "Drives" = "Диски";
 "Power cycles" = "Кількість циклів";
 "Power on hours" = "Години роботи";
@@ -385,6 +381,7 @@
 "removable" = "змінний"; // qwen3.8:27b
 
 // Sensors
+"Temperature unit" = "Одиниця виміру температури";
 "Celsius" = "Цельсія";
 "Fahrenheit" = "Фаренгейта";
 "Save the fan speed" = "Зберегти швидкість вентилятора";
@@ -419,6 +416,11 @@
 "Interface" = "Інтерфейс";
 "Physical address" = "Фізичний адрес";
 "Refresh" = "Оновити";
+"Click to copy public IP address" = "Натисніть, щоб скопіювати публічний IP";
+"Click to copy local IP address" = "Натисніть, щоб скопіювати локальний IP";
+"Click to copy wifi name" = "Натисніть, щоб скопіювати назву wifi";
+"Click to copy mac address" = "Натисніть, щоб скопіювати фізичний адрес";
+"No connection" = "Немає з'єднання";
 "Network interface" = "Мережевий інтерфейс";
 "Total download" = "Загально завантажено";
 "Total upload" = "Загально вислано";
@@ -430,9 +432,12 @@
 "Standard" = "Стандарт";
 "Security" = "Шифрування";
 "Channel" = "Канал";
+"Common scale" = "Загальна шкала";
 "Autodetection" = "Автовизначення";
 "Widget activation threshold" = "Поріг активації віджета";
 "Internet connection" = "Підключення до інтернету";
+"Active state color" = "Колір активного стану";
+"Nonactive state color" = "Колір неактивного стану";
 "Connectivity host" = "Хост підключення";
 "Leave empty to disable the check" = "Залиште пустим, щоб вимкнути перевірку";
 "Connectivity history" = "Історія підключення";
@@ -440,8 +445,11 @@
 "Every hour" = "Щогодини";
 "Every 12 hours" = "Кожні 12 годин";
 "Every 24 hours" = "Кожні 24 години";
+"Network activity" = "Мережева активність";
 "Last reset" = "Останнє скидання %0 тому";
 "Latency" = "Затримка";
+"Upload speed" = "Висилання";
+"Download speed" = "Завантаження";
 "Address" = "Адреса";
 "WiFi network" = "Мережа WiFi";
 "Local IP changed" = "Локальна IP-адреса була змінена";
@@ -460,6 +468,7 @@
 "This will be visible in the text widget" = "Це буде видно у текстовому віджеті"; // qwen3.8:27b
 
 // Battery
+"Level" = "Рівень заряду";
 "Source" = "Джерело";
 "AC Power" = "Мережне живлення";
 "Battery Power" = "Акумулятор";
@@ -475,6 +484,7 @@
 "Time to charge" = "Час до зарядки";
 "Calculating" = "Обчислення";
 "Fully charged" = "Повністю заряджена";
+"Not connected" = "Не під'єднаний";
 "Low level notification" = "Повідомлення про низький рівень заряду";
 "High level notification" = "Повідомлення про високий рівень заряду";
 "Low battery" = "Низький заряд акумулятора";
@@ -497,6 +507,7 @@
 "Level" = "Рівень"; // qwen3.8:27b
 
 // Bluetooth
+"Battery to show" = "Активна батарея";
 "No Bluetooth devices are available" = "Немає пристроїв Bluetooth";
 "Bluetooth threshold" = "Поріг Bluetooth"; // qwen3.8:27b
 

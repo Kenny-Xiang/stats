@@ -1,6 +1,6 @@
 //
 //  Localizable.strings
-//  Stats
+//  MemoryBar
 //
 //  Created by @moriczr on 22/01/2021, updated by András Oravecz (info@oandras.hu) on 06/01/2023
 //  Using Swift 5.0.
@@ -31,7 +31,6 @@
 
 // Words
 "Unknown" = "Ismeretlen";
-"Version" = "Verzió";
 "Processor" = "Processzor";
 "Memory" = "Memória";
 "Graphics" = "Grafika";
@@ -58,6 +57,7 @@
 "Center alignment" = "Középre igazítás";
 "Right alignment" = "Jobbra igazítás";
 "Dashboard" = "Irányítópult";
+"Enabled" = "Bekapcsolva";
 "Disabled" = "Kikapcsolva";
 "Silent" = "Néma";
 "Units" = "Mértékegységek";
@@ -67,24 +67,26 @@
 "Square" = "Négyzet";
 "Cube" = "Kocka";
 "Logarithmic" = "Logaritmikus";
-"Fixed scale" = "Rögzített"; // gemma4:31b
+"Fixed scale" = "Javítva"; // translategemma:4b
 "Cores" = "Magok";
-"Core" = "Mag"; // gemma4:31b
+"Core" = "Alap"; // translategemma:4b
 "Settings" = "Beállítások";
 "Name" = "Név";
 "Format" = "Formátum";
 "Turn off" = "Kikapcsolás";
-"Normal" = "Normál"; // gemma4:31b
+"Normal" = "Normális"; // translategemma:4b
 "Warning" = "Figyelmeztetés";
 "Critical" = "Kritikus";
 "Usage" = "Használat";
 "2 minutes" = "2 perc"; // translategemma:4b
 "3 minutes" = "3 perc"; // translategemma:4b
 "10 minutes" = "10 perc"; // translategemma:4b
+"Import" = "Importálás"; // translategemma:4b
+"Export" = "Kivonás"; // translategemma:4b
 "Separator" = "Elválasztó"; // translategemma:4b
-"Read" = "Olvasás"; // gemma4:31b
-"Write" = "Írás"; // gemma4:31b
-"Frequency" = "Frekvencia"; // gemma4:31b
+"Read" = "Olvassa el"; // translategemma:4b
+"Write" = "Ír"; // translategemma:4b
+"Frequency" = "Hajlamosaság"; // translategemma:4b
 "Save" = "Mentés"; // translategemma:4b
 "Run" = "Futtatás"; // gemma4:31b
 "Stop" = "Leállítás"; // gemma4:31b
@@ -101,31 +103,22 @@
 "Enable" = "Engedélyezés"; // qwen3.8:27b
 
 // Setup
-"Stats Setup" = "A Stats beállítása";
+"MemoryBar Setup" = "A MemoryBar beállítása";
 "Previous" = "Előző";
 "Previous page" = "Előző oldal";
 "Next" = "Következő";
 "Next page" = "Következő oldal";
 "Finish" = "Befejezés";
 "Finish setup" = "Beállítás befejezése";
-"Welcome to Stats" = "Üdvözlünk a Stats programban";
-"welcome_message" = "Köszönjük, hogy a Stats programot használod, ami egy ingyenes, nyílt forráskódú, macOS rendszer monitorozó alkalmazás a menüsorodba.";
-"Select preset" = "Válasszon előbeállítást"; // gemma4:31b
-"select_preset_message" = "Válasszon egy kezdő modulkészletet. Mindent később testreszabhat a Beállításokban."; // gemma4:31b
-"Default" = "Alapértelmezett"; // gemma4:31b
-"Basic" = "Alapvető"; // gemma4:31b
-"Recommended" = "Ajánlott"; // gemma4:31b
-"Extended" = "Bővített"; // gemma4:31b
+"Welcome to MemoryBar" = "Üdvözlünk a MemoryBar programban";
+"welcome_message" = "Köszönjük, hogy a MemoryBar programot használod, ami egy ingyenes, nyílt forráskódú, macOS rendszer monitorozó alkalmazás a menüsorodba.";
 "Start the application automatically when starting your Mac" = "Az alkalmazás indítása a rendszer indulásakor";
 "Do not start the application automatically when starting your Mac" = "Ne indítsa az alkalmazást a rendszer indulásakor";
-"Do everything silently in the background (recommended)" = "Végezzen mindent csendben a háttérben (ajánlott)";
-"Check for a new version on startup" = "Új verzió keresése indításkor";
-"Check for a new version every day (once a day)" = "Új verzió keresése minden nap (napi egyszer)";
-"Check for a new version every week (once a week)" = "Új verzió keresése minden héten (heti egyszer)";
-"Check for a new version every month (once a month)" = "Új verzió keresése minden hónapban (havi egyszer)";
-"Never check for updates (not recommended)" = "Ne keressen frissítéseket (nem ajánlott)";
+"Anonymous telemetry for better development decisions" = "Névtelen telemetria a jobb fejlesztői döntések érdekében";
+"Share anonymous telemetry data" = "Névtelen telemetriai adatok megosztása";
+"Do not share anonymous telemetry data" = "Ne osszon meg névtelen telemetriai adatokat";
 "The configuration is completed" = "A konfiguráció befejezve";
-"finish_setup_message" = "Minden beállítva!\nA Stats egy nyílt forráskódú eszköz, ami ingyenes és az is marad.\nHa hasznosnak találod, támogathatod a fejlesztését, mindig nagyra értékeljük!";
+"finish_setup_message" = "MemoryBar is ready.";
 
 // Alerts
 "New version available" = "Új verzió érhető el";
@@ -138,8 +131,6 @@
 
 // Settings
 "Open Activity Monitor" = "Tevékenységfigyelő megnyitása";
-"Report a bug" = "Probléma jelentése";
-"Support the application" = "Támogasd az alkalmazás fejlesztését";
 "Close application" = "Alkalmazás bezárása";
 "Open application settings" = "Beállítások megnyitása";
 "Open dashboard" = "Irányítópult megnyitása";
@@ -150,23 +141,18 @@
 "Close module settings" = "Modulbeállítások bezárása"; // qwen3.8:27b
 
 // Application settings
-"Check for updates" = "Frissítések keresése";
+"Update application" = "Alkalmazás frissítése";
 "At start" = "Induláskor";
 "Once per day" = "Naponta";
 "Once per week" = "Hetente";
 "Once per month" = "Havonta";
 "Never" = "Soha";
-"Check for update" = "Frissítés keresése";
 "Show icon in dock" = "Ikon megjelenítése a Dockban";
 "Start at login" = "Alkalmazás indítása bejelentkezéskor";
 "Build number" = "Build száma";
 "Import settings" = "Beállítások importálása"; // gemma4:31b
 "Export settings" = "Beállítások exportálása"; // gemma4:31b
 "Reset settings" = "Beállítások alaphelyzetbe állítása";
-"Pause the Stats" = "Stats felfüggesztése";
-"Resume the Stats" = "Stats folytatása";
-"Combined modules" = "Egyesített modulok";
-"Combined details" = "Kombinált részletek"; // gemma4:31b
 "Spacing" = "Helyköz";
 "Choose file" = "Fájl választása"; // gemma4:31b
 "Stress tests" = "Terhelési tesztek"; // gemma4:31b
@@ -181,9 +167,9 @@
 "Number of threads" = "%0 szál";
 "Number of e-cores" = "%0 energiatakarékos mag";
 "Number of p-cores" = "%0 teljesítményre optimalizált mag";
-"Number of s-cores" = "%0 szupermag"; // gemma4:31b
-"Disks" = "Lemezek"; // gemma4:31b
-"Display" = "Kijelző"; // gemma4:31b
+"Number of s-cores" = "%0 nagyteljesítményű magok"; // translategemma:4b
+"Disks" = "Merevlemezek"; // translategemma:4b
+"Display" = "Megjelenítés"; // translategemma:4b
 
 // Update
 "The latest version of Stats installed" = "A Stats legújabb verziója van telepítve";
@@ -215,13 +201,13 @@
 "Network chart widget" = "Hálózati diagram";
 "Speed widget" = "Sebesség";
 "Battery widget" = "Akkumulátor";
-"Stack widget" = "Halom"; // gemma4:31b
+"Stack widget" = "Szerkezet"; // translategemma:4b
 "Memory widget" = "Memória";
 "Static width" = "Fix szélesség";
 "Tachometer widget" = "Fordulatszámmérő";
 "State widget" = "Állapot";
-"Text widget" = "Szöveg-widget"; // gemma4:31b
-"Battery details widget" = "Akkumulátor részletek widgetje"; // gemma4:31b
+"Text widget" = "Tekstbox"; // translategemma:4b
+"Battery details widget" = "A akkumulátor részletei widget"; // translategemma:4b
 "Show symbols" = "Szimbólumok mutatása";
 "Label widget" = "Címke";
 "Number of reads in the chart" = "Értékek száma a grafikonon";
@@ -229,10 +215,10 @@
 "Color of upload" = "Feltöltés színe";
 "Monospaced font" = "Mono betűtípus";
 "Reverse order" = "Fordított sorrend";
-"Chart history" = "Grafikon története"; // gemma4:31b
-"Default color" = "Alapértelmezett"; // gemma4:31b
-"Transparent when no activity" = "Átlátszó, ha nincs aktivitás"; // gemma4:31b
-"Constant color" = "Állandó"; // gemma4:31b
+"Chart history" = "Grafikonok története"; // translategemma:4b
+"Default color" = "Alapérték"; // translategemma:4b
+"Transparent when no activity" = "Árnyalatless, ha nincs tevékenység"; // translategemma:4b
+"Constant color" = "Konstans"; // translategemma:4b
 "Custom..." = "Egyéni...";
 
 // Module Kit
@@ -250,7 +236,7 @@
 "No available widgets to configure" = "Nincs elérhető widget a beállításhoz";
 "No options to configure for the popup in this module" = "A modul felugró ablakához nem tartozik beállítás";
 "Process" = "Folyamat"; // translategemma:4b
-"Kill process" = "Folyamat leállítása"; // gemma4:31b
+"Kill process" = "Átírd a folyamatot"; // translategemma:4b
 "Keyboard shortcut" = "Billentyűparancs"; // translategemma:4b
 "Listening..." = "Figyel..."; // gemma4:31b
 "Open in browser" = "Megnyitás böngészőben"; // qwen3.8:27b
@@ -259,11 +245,12 @@
 // Modules
 "Number of top processes" = "Top folyamatok száma";
 "Update interval for top processes" = "Top folyamatok frissítési időköze";
+"Notification level" = "Értesítési szint";
 "Chart color" = "Diagram színe";
-"Main chart scaling" = "Főgrafikon skálázása"; // gemma4:31b
-"Scale value" = "Skála értéke"; // gemma4:31b
-"Text widget value" = "Szövegwidzset értéke"; // gemma4:31b
-"Combined processes" = "Csoportosított folyamatok"; // gemma4:31b
+"Main chart scaling" = "Fődiagram méretezése"; // translategemma:4b
+"Scale value" = "Skálázási érték"; // translategemma:4b
+"Text widget value" = "A szöveges widget értéke"; // translategemma:4b
+"Combined processes" = "Összetett folyamatok"; // translategemma:4b
 
 // CPU
 "CPU usage" = "CPU használat";
@@ -282,6 +269,7 @@
 "5 minutes" = "5 perc";
 "15 minutes" = "15 perc";
 "CPU usage threshold" = "CPU használati küszöb";
+"CPU usage is" = "%0 a CPU használat";
 "Efficiency cores" = "Energiatakarékos magok";
 "Performance cores" = "Teljesítményre optimalizált magok";
 "Super cores" = "Szupermagok"; // qwen3.8:27b
@@ -307,9 +295,18 @@
 // GPU
 "GPU to show" = "Megjelenítendő GPU";
 "Show GPU type" = "GPU típus mutatása";
+"GPU enabled" = "GPU bekapcsolva";
+"GPU disabled" = "GPU kikapcsolva";
+"GPU temperature" = "GPU hőmérséklet";
 "GPU utilization" = "GPU terhelés";
+"Vendor" = "Gyártó";
 "Model" = "Modell";
 "Status" = "Állapot";
+"Active" = "Aktív";
+"Non active" = "Inaktív";
+"Fan speed" = "Ventilátor sebesség";
+"Core clock" = "Mag órajel";
+"Memory clock" = "Memória órajel";
 "Utilization" = "Felhasználás";
 "Renderer utilization" = "Render használat";
 "Renderer utilization history" = "Render kihasználtsági előzmények"; // qwen3.8:27b
@@ -385,7 +382,8 @@
 "removable" = "eltávolítható"; // qwen3.8:27b
 
 // Sensors
-"Celsius" = "Celsziusz"; // gemma4:31b
+"Temperature unit" = "Hőmérséklet mértékegysége";
+"Celsius" = "Celsius";
 "Fahrenheit" = "Fahrenheit";
 "Save the fan speed" = "Ventilátor sebesség mentése";
 "Fan" = "Ventilátor";
@@ -396,12 +394,6 @@
 "Show unknown sensors" = "Ismeretlen szenzorok megjelenítése";
 "Install fan helper" = "Ventilátor segítő telepítése";
 "Uninstall fan helper" = "Ventilátor segítő törlése";
-"Approve in System Settings ▸ Login Items" = "Hagyja jóvá a Rendszerbeállítások ▸ Bejelentkezési elemek"; // gemma4:31b
-"Fan helper needs your approval" = "A ventilátor-segédprogramnak szükség van az Ön jóváhagyására"; // gemma4:31b
-"To control the fans, enable Stats in System Settings ▸ Login Items." = "A ventilátorok vezérléséhez engedélyezze a Stats-t a Rendszerbeállítások ▸ Bejelentkezési elemekben."; // gemma4:31b
-"Open Login Items" = "Nyisd meg a bejelentkezési elemeket"; // gemma4:31b
-"Could not enable the fan helper" = "Nem sikerült aktiválni a ventilátor segédprogramot"; // gemma4:31b
-"Open System Settings ▸ Login Items, make sure Stats is allowed in the background, then try again." = "Nyissa meg a Rendszerbeállítások ▸ Bejelentkezési elemek menüt, győződjön meg róla, hogy a Stats engedélyezve van a háttérben, majd próbálja újra."; // gemma4:31b
 "Fan value" = "Ventilátor érték";
 "Turn off fan" = "Ventilátor kikapcsolása";
 "You are going to turn off the fan. This is not recommended action that can damage your mac, are you sure you want to do that?" = "A ventilátor ki lesz kapcsolva. Ez a művelet károsíthatja a macjét, ezért nem ajánlott. Biztosan ki akarja kapcsolni a ventilátort?";
@@ -409,7 +401,7 @@
 "Left fan" = "Bal ventilátor";
 "Right fan" = "Jobb ventilátor";
 "Fastest fan" = "Leggyorsabb ventilátor";
-"Sensor to show" = "Megmutatandó szenzor"; // gemma4:31b
+"Sensor to show" = "Érzékelő, amely..."; // translategemma:4b
 
 // Network
 "Uploading" = "Feltöltés";
@@ -419,6 +411,11 @@
 "Interface" = "Interfész";
 "Physical address" = "Fizikai cím";
 "Refresh" = "Frissítés";
+"Click to copy public IP address" = "Kattints a publikus IP cím másolásához";
+"Click to copy local IP address" = "Kattints a helyi IP cím másolásához";
+"Click to copy wifi name" = "Kattints a Wi-Fi nevének másolásához";
+"Click to copy mac address" = "Kattints a fizikai cím másolásához";
+"No connection" = "Nincs kapcsolat";
 "Network interface" = "Hálózati interfész kiválasztása";
 "Total download" = "Fogadott adatok";
 "Total upload" = "Küldött adatok";
@@ -430,9 +427,12 @@
 "Standard" = "Szabvány";
 "Security" = "Biztonság";
 "Channel" = "Csatorna";
+"Common scale" = "Azonos méretezés";
 "Autodetection" = "Automatikus észlelés";
 "Widget activation threshold" = "Widget aktivációs küszöbe";
 "Internet connection" = "Internet kapcsolat";
+"Active state color" = "Aktív állapot színe";
+"Nonactive state color" = "Inaktív állapot színe";
 "Connectivity host" = "Kapcsolati gazdagép";
 "Leave empty to disable the check" = "Hagyd üresen az ellenőrzés kikapcsolásához";
 "Connectivity history" = "Kapcsolati előzmények";
@@ -440,8 +440,11 @@
 "Every hour" = "Óránként";
 "Every 12 hours" = "12 óránként";
 "Every 24 hours" = "24 óránként";
+"Network activity" = "Hálózati tevékenység";
 "Last reset" = "Utolsó visszaállítás óta eltelt idő: %0";
-"Latency" = "Látencia"; // gemma4:31b
+"Latency" = "Válaszkazán"; // translategemma:4b
+"Upload speed" = "Feltöltés"; // translategemma:4b
+"Download speed" = "Letöltés"; // translategemma:4b
 "Address" = "Cím"; // translategemma:4b
 "WiFi network" = "WiFi hálózat"; // translategemma:4b
 "Local IP changed" = "A lokális IP megváltozott"; // gemma4:31b
@@ -460,6 +463,7 @@
 "This will be visible in the text widget" = "Ez látható lesz a szöveges widgeten"; // qwen3.8:27b
 
 // Battery
+"Level" = "Töltöttségi szint";
 "Source" = "Forrás";
 "AC Power" = "Hálózati tápellátás";
 "Battery Power" = "Akkumulátor tápellátás";
@@ -475,6 +479,7 @@
 "Time to charge" = "Idő a feltöltésig";
 "Calculating" = "Kiszámítás";
 "Fully charged" = "Teljesen feltöltve";
+"Not connected" = "Nincs csatlakoztatva";
 "Low level notification" = "Alacsony töltöttség értesítés";
 "High level notification" = "Magas töltöttség értesítés";
 "Low battery" = "Alacsony akkumulátor töltöttség";
@@ -486,6 +491,10 @@
 "Time and percentage" = "Időtartam és százalék";
 "Time format" = "Időformátum";
 "Hide additional information when full" = "További információk elrejtése, ha teljesen fel van töltve";
+"Last charge" = "Utolsó töltés";
+"Capacity" = "Kapacitás";
+"current / maximum / designed" = "jelenlegi / maximum / gyári";
+"Low power mode" = "Energia takarékos mód";
 "Percentage inside the icon" = "Százalék megjelenítése az ikonban";
 "Charger state inside the battery" = "Töltési állapot az akkumulátoron belül"; // gemma4:31b
 "Max capacity" = "Maximális kapacitás"; // gemma4:31b
@@ -497,6 +506,7 @@
 "Level" = "Szint"; // qwen3.8:27b
 
 // Bluetooth
+"Battery to show" = "Akkumulátor megjelenítése";
 "No Bluetooth devices are available" = "Nincs elérhető Bluetooth eszköz";
 "Bluetooth threshold" = "Bluetooth-küszöb"; // qwen3.8:27b
 
@@ -504,14 +514,12 @@
 "Time zone" = "Időzóna";
 "Local" = "Helyi";
 "Calendar" = "Naptár"; // translategemma:4b
-"Show week numbers" = "Mutasd a heti számokat"; // gemma4:31b
+"Show week numbers" = "Mutassa meg a hetek számát"; // translategemma:4b
 "Local time" = "Helyi idő"; // translategemma:4b
-"Add new clock" = "Új óra hozzáadása"; // gemma4:31b
-"Delete selected clock" = "Töröld a kiválasztott órát"; // gemma4:31b
-"Help with datetime format" = "Segítség a dátum- és időformátumhoz"; // gemma4:31b
-"Sync with NTP server" = "Szinkronizálás NTP szerverrel"; // gemma4:31b
-"Previous month" = "Elmúlt hónap"; // gemma4:31b
-"Next month" = "Következő hónap"; // gemma4:31b
+"Add new clock" = "Hozzon létre új órát"; // translategemma:4b
+"Delete selected clock" = "Telenóra törlése"; // translategemma:4b
+"Help with datetime format" = "Segítség a dátum és idő formázásában"; // translategemma:4b
+"Sync with NTP server" = "Sinkolás az NTP szerverrel"; // translategemma:4b
 
 // Colors
 "Based on utilization" = "Használat függő";
