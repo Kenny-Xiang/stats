@@ -1,6 +1,6 @@
 //
 //  Localizable.strings
-//  Stats
+//  MemoryBar
 //
 //  Created by Serhiy Mytrovtsiy on 27/08/2020.
 //  Using Swift 5.0.
@@ -31,10 +31,9 @@
 
 // Words
 "Unknown" = "未知";
-"Version" = "版本";
 "Processor" = "处理器";
 "Memory" = "内存";
-"Graphics" = "图形"; // gemma4:31b
+"Graphics" = "图形卡"; // Use the same translation as the "about this mac"
 "Close" = "关闭";
 "Download" = "下载";
 "Install" = "安装";
@@ -59,6 +58,8 @@
 "Center alignment" = "居中";
 "Right alignment" = "右对齐";
 "Dashboard" = "仪表盘";
+"System information" = "系统信息";
+"Enabled" = "已启用";
 "Disabled" = "已停用";
 "Silent" = "运行时静默";
 "Units" = "单位";
@@ -82,6 +83,8 @@
 "2 minutes" = "2 分钟";
 "3 minutes" = "3 分钟";
 "10 minutes" = "10 分钟";
+"Import" = "导入";
+"Export" = "导出";
 "Separator" = "分隔符";
 "Read" = "读取";
 "Write" = "写入";
@@ -100,72 +103,48 @@
 "60 sec" = "60 秒";
 
 // Setup
-"Stats Setup" = "Stats设置";
+"MemoryBar Setup" = "MemoryBar设置";
 "Previous" = "上一步";
 "Previous page" = "上一页";
 "Next" = "下一步";
 "Next page" = "下一页";
 "Finish" = "完成";
 "Finish setup" = "完成设置";
-"Welcome to Stats" = "欢迎使用Stats";
-"welcome_message" = "感谢你使用Stats，一个免费的开源macOS菜单栏系统监视器。";
-"Select preset" = "选择预设"; // gemma4:31b
-"select_preset_message" = "选择一组初始模块。您稍后可以在“设置”中自定义所有内容。"; // gemma4:31b
-"Default" = "默认"; // gemma4:31b
-"Basic" = "基础"; // gemma4:31b
-"Recommended" = "推荐"; // gemma4:31b
-"Extended" = "扩展"; // gemma4:31b
+"Welcome to MemoryBar" = "欢迎使用MemoryBar";
+"welcome_message" = "感谢你使用MemoryBar，一个免费的开源macOS菜单栏系统监视器。";
 "Start the application automatically when starting your Mac" = "在启动你的Mac时自动开启应用程序";
 "Do not start the application automatically when starting your Mac" = "在启动你的Mac时不要自动开启应用程序";
-"Do everything silently in the background (recommended)" = "在后台静默运行（推荐）";
-"Check for a new version on startup" = "启动时检查新版本";
-"Check for a new version every day (once a day)" = "每天检查一次新版本（一天一次）";
-"Check for a new version every week (once a week)" = "每周检查一次新版本（一周一次）";
-"Check for a new version every month (once a month)" = "每月检查一次新版本（一月一次）";
-"Never check for updates (not recommended)" = "不要检查更新（不推荐）";
+"Anonymous telemetry for better development decisions" = "匿名诊断数据将用于改善开发决策";
+"Share anonymous telemetry data" = "分享匿名诊断数据";
+"Do not share anonymous telemetry data" = "不分享匿名诊断数据";
 "The configuration is completed" = "配置完成";
-"finish_setup_message" = "设置完成！Stats是一个开源且永远免费的工具。如果你喜欢它，你可以支持这个项目，非常感谢!";
+"finish_setup_message" = "MemoryBar is ready.";
 
 // Alerts
-"New version available" = "新版本可用";
-"Click to install the new version of Stats" = "点击安装Stats的新版本";
-"Successfully updated" = "更新成功";
-"Stats was updated to v" = "Stats已更新到 v%0";
 "Reset settings text" = "应用程序的所有设置将会被重置，应用程序也将重新启动。你确定要这么做吗？";
-"Deregister text" = "这台机器将从 System Stats 中注销，并且您将被登出。您确定要这样做吗？"; // gemma4:31b-it-qat
-"Support text" = "感谢您使用Stats！\n\n 维护和改进这个开源项目需要花费时间和资源。您的支持能帮助我们继续给每个人提供这样免费且可靠的应用程序。\n\n如果您觉得Stats对您有帮助，请考虑给我们一份捐助。即使是一点一滴都有很大的帮助！";
 
 // Settings
 "Open Activity Monitor" = "打开活动监视器";
-"Report a bug" = "报告漏洞";
-"Support the application" = "支持本应用";
 "Close application" = "关闭应用";
 "Open application settings" = "打开应用设置";
 "Open dashboard" = "打开仪表盘";
 "No notifications available in this module" = "该模块不支持通知";
 "Open Calendar" = "打开日历";
-"Toggle the module" = "切换模块显示";
-"Open System Stats" = "打开 System Stats"; // gemma4:31b
 
 // Application settings
-"Check for updates" = "检查更新";
+"Update application" = "更新应用";
 "At start" = "启动时";
 "Once per day" = "每日一次";
 "Once per week" = "每周一次";
 "Once per month" = "每月一次";
 "Never" = "从不";
-"Check for update" = "检查更新";
 "Show icon in dock" = "在程序坞显示图标";
 "Start at login" = "登录时打开";
-"Build number" = "版本号";
 "Import settings" = "导入设置";
 "Export settings" = "导出设置";
 "Reset settings" = "初始化所有设置";
-"Pause the Stats" = "暂停Stats";
-"Resume the Stats" = "恢复Stats";
-"Combined modules" = "合并模块";
-"Combined details" = "合并详情";
 "Spacing" = "间距";
+"Share anonymous telemetry" = "分享匿名诊断数据";
 "Choose file" = "选择文件";
 "Stress tests" = "压力测试";
 
@@ -178,15 +157,11 @@
 "Number of threads" = "%0 线程";
 "Number of e-cores" = "%0 能效核心";
 "Number of p-cores" = "%0 性能核心";
-"Number of s-cores" = "%0 个超级核心"; // gemma4:31b
+"Number of s-cores" = "%0 超级核心"; // translategemma:4b
 "Disks" = "磁盘"; // translategemma:4b
-"Display" = "显示器"; // gemma4:31b
+"Display" = "显示"; // translategemma:4b
 
 // Update
-"The latest version of Stats installed" = "已安装最新版Stats";
-"Downloading..." = "下载中...";
-"Current version: " = "当前版本：";
-"Latest version: " = "最新版本：";
 
 // Widgets
 "Color" = "颜色";
@@ -197,6 +172,7 @@
 "Colorize" = "彩色";
 "Colorize value" = "数值颜色";
 "Additional information" = "附加信息";
+"Reverse values order" = "数值反序";
 "Base" = "单位";
 "Display mode" = "显示模式";
 "One row" = "单行";
@@ -230,6 +206,7 @@
 
 // Module Kit
 "Open module settings" = "打开模块设置";
+"Select widget" = "选择%0小组件";
 "Open widget settings" = "打开小组件设置";
 "Update interval" = "更新间隔";
 "Usage history" = "负载历史";
@@ -251,11 +228,12 @@
 // Modules
 "Number of top processes" = "高占用进程数";
 "Update interval for top processes" = "高占用进程的更新间隔";
+"Notification level" = "通知级别";
 "Chart color" = "图表颜色";
 "Main chart scaling" = "主图表缩放";
 "Scale value" = "缩放值";
 "Text widget value" = "文本小组件值";
-"Combined processes" = "合并进程"; // gemma4:31b
+"Combined processes" = "组合流程"; // translategemma:4b
 
 // CPU
 "CPU usage" = "CPU占用";
@@ -274,6 +252,7 @@
 "5 minutes" = "5 分钟";
 "15 minutes" = "15 分钟";
 "CPU usage threshold" = "CPU占用阈值";
+"CPU usage is" = "CPU利用率是 %0";
 "Efficiency cores" = "能效核心";
 "Performance cores" = "性能核心";
 "System color" = "系统占用颜色";
@@ -289,16 +268,25 @@
 "Performance cores load" = "性能核心占用";
 "All cores" = "所有核心";
 "Load per core" = "每核心负载"; // translategemma:4b
-"Efficiency core" = "能效核心"; // gemma4:31b
+"Efficiency core" = "核心效率"; // translategemma:4b
 "Performance core" = "性能核心"; // translategemma:4b
-"Super core" = "超级核心"; // gemma4:31b
+"Super core" = "超核心"; // translategemma:4b
 
 // GPU
 "GPU to show" = "显示的GPU";
 "Show GPU type" = "显示GPU类型";
+"GPU enabled" = "GPU启用";
+"GPU disabled" = "GPU禁用";
+"GPU temperature" = "GPU温度";
 "GPU utilization" = "GPU利用率";
+"Vendor" = "厂商";
 "Model" = "型号";
 "Status" = "状态";
+"Active" = "活跃";
+"Non active" = "非活跃";
+"Fan speed" = "风扇速度";
+"Core clock" = "核心频率";
+"Memory clock" = "显存频率";
 "Utilization" = "利用率";
 "Render utilization" = "渲染利用率";
 "Tiler utilization" = "Tiler利用率";
@@ -340,28 +328,13 @@
 "Disk usage" = "磁盘使用";
 "Total read" = "总读取量";
 "Total written" = "总写入量";
-"File system" = "文件系统"; // gemma4:31b-it-qat
-"Connection type" = "连接类型"; // gemma4:31b-it-qat
-"BSD name" = "BSD 名称"; // gemma4:31b-it-qat
-"Encrypted" = "已加密"; // gemma4:31b-it-qat
-"Writable" = "可写"; // gemma4:31b-it-qat
+"Write speed" = "写入速度";
+"Read speed" = "读取速度";
 "Drives" = "驱动器";
 "SMART data" = "SMART数据";
-"ATA SMART data" = "ATA SMART 数据"; // gemma4:31b
-"Power cycles" = "电源循环次数"; // gemma4:31b
-"Power on hours" = "通电小时数"; // gemma4:31b
-"Critical warning" = "严重警告"; // gemma4:31b-it-qat
-"Available spare" = "可用备用"; // gemma4:31b-it-qat
-"Unsafe shutdowns" = "非正常关机"; // gemma4:31b-it-qat
-"Media errors" = "介质错误"; // gemma4:31b-it-qat
-"Threshold" = "阈值"; // gemma4:31b-it-qat
-"Spare below threshold" = "备用低于阈值"; // gemma4:31b-it-qat
-"Temperature out of range" = "温度超出范围"; // gemma4:31b-it-qat
-"Reliability degraded" = "可靠性降低"; // gemma4:31b-it-qat
-"Read-only mode" = "只读模式"; // gemma4:31b-it-qat
-"Backup failed" = "备份失败"; // gemma4:31b-it-qat
 
 // Sensors
+"Temperature unit" = "温度单位";
 "Celsius" = "摄氏度";
 "Fahrenheit" = "华氏度";
 "Save the fan speed" = "保存风扇转速";
@@ -373,12 +346,6 @@
 "Show unknown sensors" = "显示未知传感器";
 "Install fan helper" = "安装风扇控制程序";
 "Uninstall fan helper" = "卸载风扇控制程序";
-"Approve in System Settings ▸ Login Items" = "在系统设置 ▸ 登录项中批准"; // gemma4:31b
-"Fan helper needs your approval" = "风扇辅助工具需要您的批准"; // gemma4:31b
-"To control the fans, enable Stats in System Settings ▸ Login Items." = "若要控制风扇，请在“系统设置”▸“登录项”中启用 Stats。"; // gemma4:31b
-"Open Login Items" = "打开登录项"; // gemma4:31b
-"Could not enable the fan helper" = "无法启用风扇助手"; // gemma4:31b
-"Open System Settings ▸ Login Items, make sure Stats is allowed in the background, then try again." = "打开“系统设置” ▸ “登录项”，确保 Stats 已允许在后台运行，然后重试。"; // gemma4:31b
 "Fan value" = "风扇转数";
 "Turn off fan" = "禁用风扇";
 "You are going to turn off the fan. This is not recommended action that can damage your mac, are you sure you want to do that?" = "你想禁用你的风扇，这可能损害你的Mac。不推荐进行这个操作，你确定要继续吗？";
@@ -396,6 +363,11 @@
 "Interface" = "接口";
 "Physical address" = "物理地址";
 "Refresh" = "刷新";
+"Click to copy public IP address" = "点击拷贝公网IP";
+"Click to copy local IP address" = "点击拷贝本地IP";
+"Click to copy wifi name" = "点击拷贝Wi-Fi名称";
+"Click to copy mac address" = "点击拷贝MAC地址";
+"No connection" = "无网络连接";
 "Network interface" = "网络接口";
 "Total download" = "总下载";
 "Total upload" = "总上传";
@@ -407,9 +379,12 @@
 "Standard" = "标准";
 "Security" = "安全";
 "Channel" = "频道";
+"Common scale" = "统一比例";
 "Autodetection" = "自动检测";
 "Widget activation threshold" = "小组件激活阈值";
 "Internet connection" = "网络连接状态";
+"Active state color" = "活跃状态颜色";
+"Nonactive state color" = "非活跃状态颜色";
 "Connectivity host" = "连接 Host";
 "Leave empty to disable the check" = "不在该选项内输入以禁用检查";
 "Connectivity history" = "连接历史";
@@ -417,8 +392,11 @@
 "Every hour" = "每小时";
 "Every 12 hours" = "每12小时";
 "Every 24 hours" = "每24小时";
+"Network activity" = "网络活动";
 "Last reset" = "上次重置于 %0 之前";
 "Latency" = "延迟";
+"Upload speed" = "上传速度";
+"Download speed" = "下载速度";
 "Address" = "地址";
 "WiFi network" = "WiFi网络";
 "Local IP changed" = "本地IP已变更";
@@ -427,9 +405,10 @@
 "New IP" = "新IP：%0";
 "Internet connection lost" = "互联网连接丢失";
 "Internet connection established" = "互联网连接已建立";
-"Show country code instead of emoji" = "显示国家代码而不是 emoji"; // gemma4:31b
+"Show country code instead of emoji" = "显示国家代码，而不是表情符号"; // translategemma:4b
 
 // Battery
+"Level" = "电量";
 "Source" = "电源";
 "AC Power" = "交流电";
 "Battery Power" = "电池";
@@ -446,6 +425,7 @@
 "Time to charge" = "充电所需时间";
 "Calculating" = "计算中";
 "Fully charged" = "已充满";
+"Not connected" = "未连接";
 "Low level notification" = "低电量通知";
 "High level notification" = "高电量通知";
 "Low battery" = "低电量";
@@ -457,16 +437,18 @@
 "Time and percentage" = "时间和百分比";
 "Time format" = "时间格式";
 "Hide additional information when full" = "电池充满后隐藏其他信息";
+"Last charge" = "最后一次充电";
+"Capacity" = "容量";
+"current / maximum / designed" = "当前容量 / 最大容量 / 设计容量";
+"Low power mode" = "低电量模式";
 "Percentage inside the icon" = "图标内百分比";
+"Colorize battery" = "启用彩色电池图标";
+"Charging current" = "充电电流";
+"Charging Voltage" = "充电电压";
 "Charger state inside the battery" = "在电池图标内显示充电器状态";
-"Max capacity" = "最大容量"; // gemma4:31b
-"Designed capacity" = "设计容量"; // gemma4:31b
-"On hold" = "暂停"; // gemma4:31b
-"On battery" = "电池供电"; // gemma4:31b
-"Plugged in" = "已连接电源"; // gemma4:31b
-"Charging" = "充电中"; // gemma4:31b
 
 // Bluetooth
+"Battery to show" = "显示的设备";
 "No Bluetooth devices are available" = "没有可用的蓝牙设备";
 
 // Clock
@@ -479,8 +461,6 @@
 "Delete selected clock" = "删除选定的时钟";
 "Help with datetime format" = "日期时间格式帮助";
 "Sync with NTP server" = "与 NTP 服务器同步"; // translategemma:4b
-"Previous month" = "上个月"; // gemma4:31b
-"Next month" = "下个月"; // gemma4:31b
 
 // Colors
 "Based on utilization" = "基于利用率";

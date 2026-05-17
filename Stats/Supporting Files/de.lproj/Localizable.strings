@@ -1,6 +1,6 @@
 //
 //  Localizable.strings
-//  Stats
+//  MemoryBar
 //
 //  Created by Serhiy Mytrovtsiy on 27/08/2020.
 //  Using Swift 5.0.
@@ -31,7 +31,6 @@
 
 // Words
 "Unknown" = "Unbekannt";
-"Version" = "Version";
 "Processor" = "Prozessor";
 "Memory" = "Speicher";
 "Graphics" = "Grafik";
@@ -59,6 +58,7 @@
 "Center alignment" = "Zentriert";
 "Right alignment" = "Rechts";
 "Dashboard" = "Dashboard";
+"Enabled" = "Aktiviert";
 "Disabled" = "Deaktiviert";
 "Silent" = "Lautlos";
 "Units" = "Einheiten";
@@ -82,6 +82,8 @@
 "2 minutes" = "2 Minuten";
 "3 minutes" = "3 Minuten";
 "10 minutes" = "10 Minuten";
+"Import" = "Importieren";
+"Export" = "Exportieren";
 "Separator" = "Trennzeichen";
 "Read" = "Lesen";
 "Write" = "Schreiben";
@@ -100,72 +102,48 @@
 "60 sec" = "60 Sek.";
 
 // Setup
-"Stats Setup" = "Stats einrichten";
+"MemoryBar Setup" = "MemoryBar einrichten";
 "Previous" = "Zurück";
 "Previous page" = "Vorherige Seite";
 "Next" = "Weiter";
 "Next page" = "Nächste Seite";
 "Finish" = "Fertig";
 "Finish setup" = "Einrichtung abschließen";
-"Welcome to Stats" = "Willkommen bei Stats";
-"welcome_message" = "Vielen Dank, dass Sie Stats verwenden – einen kostenlosen Open-Source-Systemmonitor für Ihre macOS-Menüleiste.";
-"Select preset" = "Voreinstellung auswählen"; // gemma4:31b
-"select_preset_message" = "Wählen Sie ein Startset an Modulen. Sie können später in den Einstellungen alles anpassen."; // gemma4:31b
-"Default" = "Standard"; // gemma4:31b
-"Basic" = "Basis"; // gemma4:31b
-"Recommended" = "Empfohlen"; // gemma4:31b
-"Extended" = "Erweitert"; // gemma4:31b
+"Welcome to MemoryBar" = "Willkommen bei MemoryBar";
+"welcome_message" = "Vielen Dank, dass Sie MemoryBar verwenden – einen kostenlosen Open-Source-Systemmonitor für Ihre macOS-Menüleiste.";
 "Start the application automatically when starting your Mac" = "Die App automatisch beim Starten Ihres Mac starten";
 "Do not start the application automatically when starting your Mac" = "Die App nicht automatisch beim Starten Ihres Mac starten";
-"Do everything silently in the background (recommended)" = "Alles lautlos im Hintergrund ausführen (empfohlen)";
-"Check for a new version on startup" = "Beim Start nach einer neuen Version suchen";
-"Check for a new version every day (once a day)" = "Täglich nach einer neuen Version suchen (einmal pro Tag)";
-"Check for a new version every week (once a week)" = "Wöchentlich nach einer neuen Version suchen (einmal pro Woche)";
-"Check for a new version every month (once a month)" = "Monatlich nach einer neuen Version suchen (einmal pro Monat)";
-"Never check for updates (not recommended)" = "Nie nach Updates suchen (nicht empfohlen)";
+"Anonymous telemetry for better development decisions" = "Anonyme Telemetrie für bessere Entwicklungsentscheidungen";
+"Share anonymous telemetry data" = "Anonyme Telemetriedaten teilen";
+"Do not share anonymous telemetry data" = "Keine anonymen Telemetriedaten teilen";
 "The configuration is completed" = "Die Einrichtung ist abgeschlossen";
-"finish_setup_message" = "Alles ist eingerichtet! \n Stats ist ein Open-Source-Tool, das kostenlos ist und immer kostenlos bleiben wird. \n Wenn es Ihnen gefällt, können Sie das Projekt unterstützen – das wird immer geschätzt!";
+"finish_setup_message" = "MemoryBar is ready.";
 
 // Alerts
-"New version available" = "Neue Version verfügbar";
-"Click to install the new version of Stats" = "Klicken, um die neue Version von Stats zu installieren";
-"Successfully updated" = "Erfolgreich aktualisiert";
-"Stats was updated to v" = "Stats wurde auf v%0 aktualisiert";
 "Reset settings text" = "Alle Einstellungen der App werden zurückgesetzt und die App wird neu gestartet. Sind Sie sicher, dass Sie das tun möchten?";
-"Deregister text" = "Der Rechner wird von System Stats deregistriert und Sie werden ausgeloggt. Sind Sie sicher, dass Sie dies tun möchten?"; // gemma4:31b-it-qat
-"Support text" = "Vielen Dank, dass Sie Stats verwenden!\n\n Die Pflege und Verbesserung dieses Open-Source-Projekts erfordert Zeit und Ressourcen. Ihre Unterstützung hilft uns, weiterhin eine kostenlose und zuverlässige App für alle bereitzustellen.\n\nWenn Sie Stats hilfreich finden, erwägen Sie bitte einen Beitrag. Jede Kleinigkeit hilft!";
 
 // Settings
 "Open Activity Monitor" = "Aktivitätsanzeige öffnen";
-"Report a bug" = "Fehler melden";
-"Support the application" = "Die App unterstützen";
 "Close application" = "App schließen";
 "Open application settings" = "App-Einstellungen öffnen";
 "Open dashboard" = "Dashboard öffnen";
 "No notifications available in this module" = "In diesem Modul sind keine Benachrichtigungen verfügbar";
 "Open Calendar" = "Kalender öffnen";
-"Toggle the module" = "Modul umschalten";
-"Open System Stats" = "System Stats öffnen"; // gemma4:31b
 
 // Application settings
-"Check for updates" = "Nach Updates suchen";
+"Update application" = "App aktualisieren";
 "At start" = "Beim Start";
 "Once per day" = "Einmal pro Tag";
 "Once per week" = "Einmal pro Woche";
 "Once per month" = "Einmal pro Monat";
 "Never" = "Nie";
-"Check for update" = "Nach Update suchen";
 "Show icon in dock" = "Symbol im Dock anzeigen";
 "Start at login" = "Bei Anmeldung starten";
-"Build number" = "Build-Nummer";
 "Import settings" = "Einstellungen importieren";
 "Export settings" = "Einstellungen exportieren";
 "Reset settings" = "Einstellungen zurücksetzen";
-"Pause the Stats" = "Stats pausieren";
-"Resume the Stats" = "Stats fortsetzen";
-"Combined modules" = "Kombinierte Module";
-"Combined details" = "Kombinierte Details";
 "Spacing" = "Abstand";
+"Share anonymous telemetry" = "Anonyme Telemetrie teilen";
 "Choose file" = "Datei auswählen";
 "Stress tests" = "Stresstests";
 
@@ -183,10 +161,6 @@
 "Display" = "Bildschirm";
 
 // Update
-"The latest version of Stats installed" = "Die neueste Version von Stats ist installiert";
-"Downloading..." = "Wird heruntergeladen …";
-"Current version: " = "Aktuelle Version:  ";
-"Latest version: " = "Neueste Version:   ";
 
 // Widgets
 "Color" = "Farbe";
@@ -197,6 +171,7 @@
 "Colorize" = "Einfärben";
 "Colorize value" = "Wert einfärben";
 "Additional information" = "Zusätzliche Informationen";
+"Reverse values order" = "Wertereihenfolge umkehren";
 "Base" = "Basis";
 "Display mode" = "Anzeigemodus";
 "One row" = "Eine Zeile";
@@ -211,7 +186,7 @@
 "Stack widget" = "Stapel";
 "Memory widget" = "Speicher";
 "Static width" = "Feste Breite";
-"Tachometer widget" = "Drehzahlmesser"; // gemma4:31b
+"Tachometer widget" = "Tachometer";
 "State widget" = "Status-Widget";
 "Text widget" = "Text-Widget";
 "Battery details widget" = "Batteriedetails-Widget";
@@ -230,6 +205,7 @@
 
 // Module Kit
 "Open module settings" = "Modul-Einstellungen öffnen";
+"Select widget" = "%0-Widget auswählen";
 "Open widget settings" = "Widget-Einstellungen öffnen";
 "Update interval" = "Aktualisierungsintervall";
 "Usage history" = "Nutzungsverlauf";
@@ -251,11 +227,12 @@
 // Modules
 "Number of top processes" = "Anzahl der Top-Prozesse";
 "Update interval for top processes" = "Aktualisierungsintervall für Top-Prozesse";
+"Notification level" = "Benachrichtigungsstufe";
 "Chart color" = "Diagrammfarbe";
 "Main chart scaling" = "Hauptdiagramm-Skalierung";
 "Scale value" = "Skalierungswert";
 "Text widget value" = "Text-Widget-Wert";
-"Combined processes" = "Zusammengefasste Prozesse"; // gemma4:31b
+"Combined processes" = "Kombinierte Prozesse"; // translategemma:4b
 
 // CPU
 "CPU usage" = "CPU-Auslastung";
@@ -274,6 +251,7 @@
 "5 minutes" = "5 Minuten";
 "15 minutes" = "15 Minuten";
 "CPU usage threshold" = "CPU-Auslastungsschwelle";
+"CPU usage is" = "CPU-Auslastung ist %0";
 "Efficiency cores" = "Effizienzkerne";
 "Performance cores" = "Leistungskerne";
 "System color" = "Systemfarbe";
@@ -296,9 +274,18 @@
 // GPU
 "GPU to show" = "Anzuzeigende GPU";
 "Show GPU type" = "GPU-Typ anzeigen";
+"GPU enabled" = "GPU aktiviert";
+"GPU disabled" = "GPU deaktiviert";
+"GPU temperature" = "GPU-Temperatur";
 "GPU utilization" = "GPU-Auslastung";
+"Vendor" = "Hersteller";
 "Model" = "Modell";
 "Status" = "Status";
+"Active" = "Aktiv";
+"Non active" = "Inaktiv";
+"Fan speed" = "Lüftergeschwindigkeit";
+"Core clock" = "Kerntakt";
+"Memory clock" = "Speichertakt";
 "Utilization" = "Auslastung";
 "Render utilization" = "Render-Auslastung";
 "Tiler utilization" = "Tiler-Auslastung";
@@ -310,7 +297,7 @@
 "Memory pressure" = "Speicherdruck";
 "Total" = "Gesamt";
 "Used" = "Belegt";
-"App" = "Apps"; // gemma4:31b
+"App" = "App";
 "Wired" = "Reserviert";
 "Compressed" = "Komprimiert";
 "Free" = "Frei";
@@ -340,28 +327,13 @@
 "Disk usage" = "Festplattennutzung";
 "Total read" = "Gelesen gesamt";
 "Total written" = "Geschrieben gesamt";
-"File system" = "Dateisystem"; // gemma4:31b-it-qat
-"Connection type" = "Verbindungstyp"; // gemma4:31b-it-qat
-"BSD name" = "BSD-Name"; // gemma4:31b-it-qat
-"Encrypted" = "Verschlüsselt"; // gemma4:31b-it-qat
-"Writable" = "Beschreibbar"; // gemma4:31b-it-qat
+"Write speed" = "Schreiben";
+"Read speed" = "Lesen";
 "Drives" = "Laufwerke";
 "SMART data" = "SMART-Daten";
-"ATA SMART data" = "ATA SMART-Daten"; // gemma4:31b
-"Power cycles" = "Ladezyklen"; // gemma4:31b
-"Power on hours" = "Betriebsstunden"; // gemma4:31b
-"Critical warning" = "Kritische Warnung"; // gemma4:31b-it-qat
-"Available spare" = "Verfügbare Reserve"; // gemma4:31b-it-qat
-"Unsafe shutdowns" = "Unsichere Herunterfahrungen"; // gemma4:31b-it-qat
-"Media errors" = "Medienfehler"; // gemma4:31b-it-qat
-"Threshold" = "Schwellenwert"; // gemma4:31b-it-qat
-"Spare below threshold" = "Reserve unter Schwellenwert"; // gemma4:31b-it-qat
-"Temperature out of range" = "Temperatur außerhalb des Bereichs"; // gemma4:31b-it-qat
-"Reliability degraded" = "Zuverlässigkeit beeinträchtigt"; // gemma4:31b-it-qat
-"Read-only mode" = "Schreibgeschützter Modus"; // gemma4:31b-it-qat
-"Backup failed" = "Backup fehlgeschlagen"; // gemma4:31b-it-qat
 
 // Sensors
+"Temperature unit" = "Temperatureinheit";
 "Celsius" = "Celsius";
 "Fahrenheit" = "Fahrenheit";
 "Save the fan speed" = "Lüftergeschwindigkeit speichern";
@@ -373,12 +345,6 @@
 "Show unknown sensors" = "Unbekannte Sensoren anzeigen";
 "Install fan helper" = "Lüfter-Hilfsprogramm installieren";
 "Uninstall fan helper" = "Lüfter-Hilfsprogramm deinstallieren";
-"Approve in System Settings ▸ Login Items" = "Bestätigen in den Systemeinstellungen ▸ Anmeldeobjekte"; // gemma4:31b
-"Fan helper needs your approval" = "Lüfter-Hilfsprogramm benötigt Ihre Zustimmung"; // gemma4:31b
-"To control the fans, enable Stats in System Settings ▸ Login Items." = "Um die Lüfter zu steuern, aktivieren Sie Stats in den Systemeinstellungen ▸ Anmeldeobjekte."; // gemma4:31b
-"Open Login Items" = "Anmeldeobjekte öffnen"; // gemma4:31b
-"Could not enable the fan helper" = "Konnte den Lüfter-Helper nicht aktivieren"; // gemma4:31b
-"Open System Settings ▸ Login Items, make sure Stats is allowed in the background, then try again." = "Öffne die Systemeinstellungen ▸ Anmeldeobjekte, stelle sicher, dass Stats im Hintergrund erlaubt ist, und versuche es dann erneut."; // gemma4:31b
 "Fan value" = "Lüfterwert";
 "Turn off fan" = "Lüfter ausschalten";
 "You are going to turn off the fan. This is not recommended action that can damage your mac, are you sure you want to do that?" = "Sie sind dabei, den Lüfter auszuschalten. Dies ist keine empfohlene Aktion und kann Ihren Mac beschädigen. Sind Sie sicher, dass Sie das tun möchten?";
@@ -396,6 +362,11 @@
 "Interface" = "Schnittstelle";
 "Physical address" = "Physische Adresse";
 "Refresh" = "Aktualisieren";
+"Click to copy public IP address" = "Klicken, um die öffentliche IP-Adresse zu kopieren";
+"Click to copy local IP address" = "Klicken, um die lokale IP-Adresse zu kopieren";
+"Click to copy wifi name" = "Klicken, um den WLAN-Namen zu kopieren";
+"Click to copy mac address" = "Klicken, um die MAC-Adresse zu kopieren";
+"No connection" = "Keine Verbindung";
 "Network interface" = "Netzwerkschnittstelle";
 "Total download" = "Download gesamt";
 "Total upload" = "Upload gesamt";
@@ -407,9 +378,12 @@
 "Standard" = "Standard";
 "Security" = "Sicherheit";
 "Channel" = "Kanal";
+"Common scale" = "Gemeinsame Skala";
 "Autodetection" = "Automatische Erkennung";
 "Widget activation threshold" = "Widget-Aktivierungsschwelle";
 "Internet connection" = "Internetverbindung";
+"Active state color" = "Farbe für aktiven Zustand";
+"Nonactive state color" = "Farbe für inaktiven Zustand";
 "Connectivity host" = "Verbindungshost";
 "Leave empty to disable the check" = "Leer lassen, um die Prüfung zu deaktivieren";
 "Connectivity history" = "Verbindungsverlauf";
@@ -417,8 +391,11 @@
 "Every hour" = "Jede Stunde";
 "Every 12 hours" = "Alle 12 Stunden";
 "Every 24 hours" = "Alle 24 Stunden";
+"Network activity" = "Netzwerkaktivität";
 "Last reset" = "Letzte Zurücksetzung vor %0";
 "Latency" = "Latenz";
+"Upload speed" = "Uploadgeschwindigkeit";
+"Download speed" = "Downloadgeschwindigkeit";
 "Address" = "Adresse";
 "WiFi network" = "WLAN-Netzwerk";
 "Local IP changed" = "Lokale IP hat sich geändert";
@@ -427,9 +404,10 @@
 "New IP" = "Neue IP: %0";
 "Internet connection lost" = "Internetverbindung unterbrochen";
 "Internet connection established" = "Internetverbindung hergestellt";
-"Show country code instead of emoji" = "Ländercode statt Emoji anzeigen"; // gemma4:31b
+"Show country code instead of emoji" = "Zeige den Landescode anstelle des Emojis"; // translategemma:4b
 
 // Battery
+"Level" = "Ladezustand";
 "Source" = "Quelle";
 "AC Power" = "Netzteil";
 "Battery Power" = "Batteriebetrieb";
@@ -446,6 +424,7 @@
 "Time to charge" = "Zeit bis zur Aufladung";
 "Calculating" = "Berechnung läuft";
 "Fully charged" = "Vollständig geladen";
+"Not connected" = "Nicht verbunden";
 "Low level notification" = "Benachrichtigung bei niedrigem Ladezustand";
 "High level notification" = "Benachrichtigung bei hohem Ladezustand";
 "Low battery" = "Niedriger Ladezustand";
@@ -457,30 +436,30 @@
 "Time and percentage" = "Zeit und Prozent";
 "Time format" = "Zeitformat";
 "Hide additional information when full" = "Zusätzliche Informationen bei voller Ladung ausblenden";
+"Last charge" = "Letzte Ladung";
+"Capacity" = "Kapazität";
+"current / maximum / designed" = "aktuell / maximal / geplant";
+"Low power mode" = "Stromsparmodus";
 "Percentage inside the icon" = "Prozentanzeige im Symbol";
+"Colorize battery" = "Batterie einfärben";
+"Charging current" = "Ladestrom";
+"Charging Voltage" = "Ladespannung";
 "Charger state inside the battery" = "Ladegerätestatus im Batteriesymbol";
-"Max capacity" = "Maximale Kapazität"; // gemma4:31b
-"Designed capacity" = "Designkapazität"; // gemma4:31b
-"On hold" = "In Wartestellung"; // gemma4:31b
-"On battery" = "Im Batteriebetrieb"; // gemma4:31b
-"Plugged in" = "Angeschlossen"; // gemma4:31b
-"Charging" = "Laden"; // gemma4:31b
 
 // Bluetooth
+"Battery to show" = "Anzuzeigende Batterie";
 "No Bluetooth devices are available" = "Keine Bluetooth-Geräte verfügbar";
 
 // Clock
 "Time zone" = "Zeitzone";
 "Local" = "Lokal";
 "Calendar" = "Kalender";
-"Show week numbers" = "Kalenderwochen anzeigen"; // gemma4:31b
+"Show week numbers" = "Zeige die Wochennummern"; // translategemma:4b
 "Local time" = "Ortszeit";
 "Add new clock" = "Neue Uhr hinzufügen";
 "Delete selected clock" = "Ausgewählte Uhr löschen";
 "Help with datetime format" = "Hilfe zum Datums-/Zeitformat";
-"Sync with NTP server" = "Synchronisation mit NTP-Server"; // gemma4:31b
-"Previous month" = "Vorheriger Monat"; // gemma4:31b
-"Next month" = "Nächster Monat"; // gemma4:31b
+"Sync with NTP server" = "Synchronisieren mit NTP-Server"; // translategemma:4b
 
 // Colors
 "Based on utilization" = "Nach Auslastung";

@@ -11,7 +11,6 @@
 
 import Cocoa
 import Kit
-import UserNotifications
 
 extension AppDelegate {
     internal func parseArguments() {
@@ -75,9 +74,6 @@ extension AppDelegate {
     internal func parseVersion() {
         let key = "version"
         let currentVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
-        guard let updateInterval = AppUpdateInterval(rawValue: Store.shared.string(key: "update-interval", defaultValue: AppUpdateInterval.silent.rawValue)) else {
-            return
-        }
         
         if !Store.shared.exist(key: key) {
             Store.shared.reset()
@@ -87,17 +83,6 @@ extension AppDelegate {
             if prevVersion == currentVersion {
                 return
             }
-            
-            if updateInterval != .silent && isNewestVersion(currentVersion: prevVersion, latestVersion: currentVersion) {
-                let title: String = localizedString("Successfully updated")
-                let subtitle: String = localizedString("Stats was updated to v", currentVersion)
-                
-                let id = showNotification(title: title, subtitle: subtitle, delegate: self)
-                DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
-                    removeNotification(id)
-                }
-            }
-            
             debug("Detected previous version \(prevVersion). Current version (\(currentVersion) set")
         }
         
@@ -112,50 +97,6 @@ extension AppDelegate {
         if Store.shared.exist(key: "dockIcon") {
             let dockIconStatus = Store.shared.bool(key: "dockIcon", defaultValue: false) ? NSApplication.ActivationPolicy.regular : NSApplication.ActivationPolicy.accessory
             NSApp.setActivationPolicy(dockIconStatus)
-        }
-        
-        self.checkIfShouldShowSupportWindow()
-        self.supportActivity.interval = 60 * 60 * 24 * 30
-        self.supportActivity.repeats = true
-        self.supportActivity.schedule { (completion: @escaping NSBackgroundActivityScheduler.CompletionHandler) in
-            DispatchQueue.main.async {
-                self.checkIfShouldShowSupportWindow()
-            }
-            completion(NSBackgroundActivityScheduler.Result.finished)
-        }
-        
-        self.supportRetryActivity.interval = 60 * 30
-        self.supportRetryActivity.repeats = true
-        self.supportRetryActivity.schedule { (completion: @escaping NSBackgroundActivityScheduler.CompletionHandler) in
-            DispatchQueue.main.async {
-                self.tryToShowSupportWindow()
-            }
-            completion(NSBackgroundActivityScheduler.Result.finished)
-        }
-        
-        if let updateInterval = AppUpdateInterval(rawValue: Store.shared.string(key: "update-interval", defaultValue: AppUpdateInterval.silent.rawValue)) {
-            self.updateActivity.invalidate()
-            self.updateActivity.repeats = true
-            
-            debug("Application update interval is '\(updateInterval.rawValue)'")
-            
-            switch updateInterval {
-            case .oncePerDay: self.updateActivity.interval = 60 * 60 * 24
-            case .oncePerWeek: self.updateActivity.interval = 60 * 60 * 24 * 7
-            case .oncePerMonth: self.updateActivity.interval = 60 * 60 * 24 * 30
-            case .atStart:
-                self.checkForNewVersion()
-                return
-            case .silent:
-                self.checkForNewVersion(silent: true)
-                return
-            default: return
-            }
-            
-            self.updateActivity.schedule { (completion: @escaping NSBackgroundActivityScheduler.CompletionHandler) in
-                self.checkForNewVersion()
-                completion(NSBackgroundActivityScheduler.Result.finished)
-            }
         }
     }
     
@@ -176,190 +117,8 @@ extension AppDelegate {
         Store.shared.set(key: "setupProcess", value: true)
     }
     
-    internal func checkForNewVersion(silent: Bool = false) {
-        updater.check { result, error in
-            if error != nil {
-                debug("error updater.check(): \(error!.localizedDescription)")
-                return
-            }
-            
-            guard let version: version_s = result else {
-                debug("download error(): no version found")
-                return
-            }
-            
-            if !version.newest {
-                return
-            }
-            
-            if silent {
-                if let url = URL(string: version.url) {
-                    updater.download(url, completion: { path in
-                        updater.install(path: path) { error in
-                            if let error {
-                                showAlert("Error update Stats", error, .critical)
-                            }
-                        }
-                    })
-                }
-                return
-            }
-            
-            debug("show update view because new version of app found: \(version.latest)")
-            
-            let center = UNUserNotificationCenter.current()
-            center.getNotificationSettings { settings in
-                DispatchQueue.main.async {
-                    switch settings.authorizationStatus {
-                    case .authorized, .provisional:
-                        self.showUpdateNotification(version: version)
-                    case .denied:
-                        self.showUpdateWindow(version: version)
-                    case .notDetermined:
-                        center.requestAuthorization(options: [.sound, .alert, .badge], completionHandler: { (_, error) in
-                            DispatchQueue.main.async {
-                                if error == nil {
-                                    NSApplication.shared.registerForRemoteNotifications()
-                                    self.showUpdateNotification(version: version)
-                                } else {
-                                    self.showUpdateWindow(version: version)
-                                }
-                            }
-                        })
-                    @unknown default:
-                        self.showUpdateWindow(version: version)
-                        error_msg("unknown notification setting")
-                    }
-                }
-            }
-        }
-    }
-    
-    public func checkIfShouldShowSupportWindow() {
-        if !Store.shared.exist(key: "setupProcess") && !Store.shared.exist(key: "runAtLoginInitialized") {
-            return
-        }
-        if SystemStats.shared.auth.hasCredentials() {
-            guard let plan = SystemStats.shared.plan else { return }
-            if plan != .free { return }
-        }
-        
-        let now = Int(Date().timeIntervalSince1970)
-        if !Store.shared.exist(key: "support_ts") {
-            Store.shared.set(key: "support_ts", value: now)
-            return
-        }
-        
-        if Store.shared.bool(key: "support_pending", defaultValue: false) {
-            self.tryToShowSupportWindow()
-            return
-        }
-        
-        let lastShow = Store.shared.int(key: "support_ts", defaultValue: now)
-        let diff = (now - lastShow) / (60 * 60 * 24)
-        if diff <= 31 {
-            debug("The support window was shown \(diff) days ago, stopping...")
-            return
-        }
-        
-        self.markSupportPending()
-    }
-    
-    internal func markSupportPending() {
-        if !Store.shared.bool(key: "support_pending", defaultValue: false) {
-            Store.shared.set(key: "support_pending", value: true)
-            Store.shared.set(key: "support_pending_ts", value: Int(Date().timeIntervalSince1970))
-        }
-        self.tryToShowSupportWindow()
-    }
-    
-    public func tryToShowSupportWindow(interaction: Bool = false) {
-        guard Store.shared.bool(key: "support_pending", defaultValue: false) else { return }
-        
-        if SystemStats.shared.auth.hasCredentials() {
-            guard let plan = SystemStats.shared.plan else { return }
-            if plan != .free {
-                Store.shared.set(key: "support_pending", value: false)
-                return
-            }
-        }
-        
-        let now = Int(Date().timeIntervalSince1970)
-        let pendingTS = Store.shared.int(key: "support_pending_ts", defaultValue: now)
-        let pendingDays = (now - pendingTS) / (60 * 60 * 24)
-        
-        DispatchQueue.global(qos: .utility).async {
-            if UserContext.isScreenLocked() {
-                debug("the support window is delayed: the screen is locked")
-                return
-            }
-            if !interaction && UserContext.secondsSinceLastInput() > 60 {
-                debug("the support window is delayed: no recent user activity")
-                return
-            }
-            if !(interaction && pendingDays > 7), let reason = UserContext.busyReason() {
-                debug("the support window is delayed: \(reason)")
-                return
-            }
-            DispatchQueue.main.async {
-                guard Store.shared.bool(key: "support_pending", defaultValue: false) else { return }
-                Store.shared.set(key: "support_pending", value: false)
-                Store.shared.set(key: "support_ts", value: Int(Date().timeIntervalSince1970))
-                self.ensureSupportWindow().show()
-            }
-        }
-    }
-    
-    private func showUpdateNotification(version: version_s) {
-        debug("show update notification")
-        _ = showNotification(
-            title: localizedString("New version available"),
-            subtitle: localizedString("Click to install the new version of Stats"),
-            userInfo: ["url": version.url],
-            delegate: self
-        )
-    }
-    
-    private func showUpdateWindow(version: version_s) {
-        debug("show update window")
-        
-        DispatchQueue.main.async(execute: {
-            self.ensureUpdateWindow().open(version)
-        })
-    }
-    
-    @objc internal func listenForAppPause() {
-        for m in modules {
-            if self.pauseState && m.enabled {
-                m.disable()
-            } else if !self.pauseState && !m.enabled && Store.shared.bool(key: "\(m.config.name)_state", defaultValue: m.config.defaultState) {
-                m.enable()
-            }
-        }
-        self.icon()
-    }
-    
-    internal func icon() {
-        if self.pauseState {
-            self.menuBarItem = NSStatusBar.system.statusItem(withLength: AppIcon.size.width)
-            DispatchQueue.main.async(execute: {
-                self.menuBarItem?.autosaveName = "Stats"
-            })
-            self.menuBarItem?.button?.addSubview(AppIcon())
-            
-            self.menuBarItem?.button?.target = self
-            self.menuBarItem?.button?.action = #selector(self.openSettings)
-            self.menuBarItem?.button?.sendAction(on: [.leftMouseDown, .rightMouseDown])
-        } else {
-            if let item = self.menuBarItem {
-                NSStatusBar.system.removeStatusItem(item)
-            }
-            self.menuBarItem = nil
-        }
-    }
-    
     @objc internal func openSettings() {
-        NotificationCenter.default.post(name: .toggleSettings, object: nil, userInfo: ["module": "Dashboard"])
+        NotificationCenter.default.post(name: .toggleSettings, object: nil, userInfo: ["module": "RAM"])
     }
     
     internal func handleKeyEvent(_ event: NSEvent) {
@@ -381,26 +140,5 @@ extension AppDelegate {
             "origin": window.frame.origin,
             "center": window.frame.width/2
         ])
-    }
-    
-    // Workaround for the WindowServer "Invalid window" log spam on macOS Tahoe (#3212, #2829).
-    //
-    // On Tahoe every layout pass on an NSStatusBarWindow schedules a tiling-constraints sync
-    // (-[NSWindow(NSFullScreen) _refreshTilingConstraints:]) that calls
-    // SLSPackagesSetWindowConstraints with the window number. A status bar window has no regular
-    // server-side window on Tahoe (the low 32 bits of its windowNumber are zero), so WindowServer
-    // rejects every call and logs "_CGXPackagesSetWindowConstraints: Invalid window" on each
-    // widget update. The gate (-[NSWindow(NSFullScreen) _needsTilingConstraintUpdate]) returns
-    // true whenever the app is inactive, which for a menu bar app is almost always.
-    //
-    // Overriding the gate on NSStatusBarWindow only (a status bar window can never be tiled)
-    // stops the sync from ever being scheduled; all other windows keep the default behavior.
-    internal func suppressStatusBarTilingConstraintUpdates() {
-        guard #available(macOS 26.0, *) else { return }
-        let selector = NSSelectorFromString("_needsTilingConstraintUpdate")
-        guard let cls = NSClassFromString("NSStatusBarWindow"),
-              let method = class_getInstanceMethod(cls, selector) else { return }
-        let block: @convention(block) (AnyObject) -> Bool = { _ in false }
-        class_addMethod(cls, selector, imp_implementationWithBlock(block), method_getTypeEncoding(method))
     }
 }

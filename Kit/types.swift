@@ -65,18 +65,6 @@ public let TemperatureUnits: [KeyValue_t] = [
     KeyValue_t(key: "fahrenheit", value: "Fahrenheit", additional: UnitTemperature.fahrenheit)
 ]
 
-public let CombinedModulesSpacings: [KeyValue_t] = [
-    KeyValue_t(key: "none", value: "None"),
-    KeyValue_t(key: "1", value: "1", additional: 1),
-    KeyValue_t(key: "2", value: "2", additional: 2),
-    KeyValue_t(key: "3", value: "3", additional: 3),
-    KeyValue_t(key: "4", value: "4", additional: 4),
-    KeyValue_t(key: "5", value: "5", additional: 5),
-    KeyValue_t(key: "6", value: "6", additional: 6),
-    KeyValue_t(key: "7", value: "7", additional: 7),
-    KeyValue_t(key: "8", value: "8", additional: 8)
-]
-
 public let PublicIPAddressRefreshIntervals: [KeyValue_t] = [
     KeyValue_t(key: "never", value: "Never"),
     KeyValue_t(key: "separator", value: "separator"),
@@ -296,7 +284,6 @@ public typealias colorZones = (orange: Double, red: Double)
 
 public extension Notification.Name {
     static let toggleSettings = Notification.Name("toggleSettings")
-    static let toggleModule = Notification.Name("toggleModule")
     static let togglePopup = Notification.Name("togglePopup")
     static let popupVisibilityChanged = Notification.Name("popupVisibilityChanged")
     static let toggleWidget = Notification.Name("toggleWidget")
@@ -311,9 +298,7 @@ public extension Notification.Name {
     static let toggleOneView = Notification.Name("toggleOneView")
     static let widgetRearrange = Notification.Name("widgetRearrange")
     static let moduleRearrange = Notification.Name("moduleRearrange")
-    static let pause = Notification.Name("pause")
     static let toggleFanControl = Notification.Name("toggleFanControl")
-    static let combinedModulesPopup = Notification.Name("combinedModulesPopup")
     static let remoteLoginSuccess = Notification.Name("remoteLoginSuccess")
     static let remoteState = Notification.Name("remoteState")
     static let remoteAuthenticated = Notification.Name("remoteAuthenticated")

@@ -383,10 +383,6 @@ public class MenuBar {
     private var menuBarItem: NSStatusItem? = nil
     private var queue: DispatchQueue
     
-    private var combinedModules: Bool {
-        Store.shared.bool(key: "CombinedModules", defaultValue: false)
-    }
-    
     public var view: MenuBarView = MenuBarView()
     public var oneView: Bool = false
     public var activeWidgets: [SWidget] {
@@ -414,11 +410,7 @@ public class MenuBar {
         self.oneView = Store.shared.bool(key: "\(self.moduleName)_oneView", defaultValue: self.oneView)
         self.view.identifier = NSUserInterfaceItemIdentifier(rawValue: moduleName)
         
-        if self.combinedModules {
-            self.oneView = true
-        } else {
-            self.setupMenuBarItem(self.oneView)
-        }
+        self.setupMenuBarItem(self.oneView)
         
         NotificationCenter.default.addObserver(self, selector: #selector(listenForOneView), name: .toggleOneView, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(listenForWidgetRearrange), name: .widgetRearrange, object: nil)
@@ -460,7 +452,7 @@ public class MenuBar {
     }
     
     public func enable() {
-        if self.oneView && !self.combinedModules {
+        if self.oneView {
             self.setupMenuBarItem(true)
         }
         self.active = true
@@ -540,10 +532,7 @@ public class MenuBar {
             w.disable()
         }
         
-        if self.combinedModules {
-            self.oneView = true
-            self.setupMenuBarItem(false)
-        } else if self.active {
+        if self.active {
             self.oneView = Store.shared.bool(key: "\(self.moduleName)_oneView", defaultValue: self.oneView)
             self.setupMenuBarItem(self.oneView)
         }

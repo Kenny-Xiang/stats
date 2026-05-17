@@ -103,11 +103,6 @@ open class Module {
     private let log: NextLog
     private var readers: [Reader_p] = []
     
-    private var pauseState: Bool {
-        get { Store.shared.bool(key: "pause", defaultValue: false) }
-        set { Store.shared.set(key: "pause", value: newValue) }
-    }
-    
     public init(
         moduleType: ModuleType,
         popup: Popup_p? = nil,
@@ -127,7 +122,8 @@ open class Module {
         self.previewView = preview
         self.menuBar = MenuBar(moduleName: self.config.name)
         self.available = self.isAvailable()
-        self.enabled = Store.shared.bool(key: "\(self.config.name)_state", defaultValue: self.config.defaultState)
+        self.enabled = self.config.defaultState
+        Store.shared.set(key: "\(self.config.name)_state", value: self.enabled)
         self.userDefaults?.set(self.enabled, forKey: "\(self.config.name)_state")
         
         if !self.available {
@@ -139,12 +135,9 @@ open class Module {
             }
             
             return
-        } else if self.pauseState {
-            self.disable()
         }
         
         NotificationCenter.default.addObserver(self, selector: #selector(listenForMouseDownInSettings), name: .clickInSettings, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(listenForModuleToggle), name: .toggleModule, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(listenForPopupToggle), name: .togglePopup, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(listenForToggleWidget), name: .toggleWidget, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(listenForWindowOpen), name: .openWindow, object: nil)
@@ -166,7 +159,8 @@ open class Module {
             notificationsSettings: self.notificationsView
         )
         
-        self.popup = PopupWindow(title: self.config.name, module: self.moduleType, view: self.popupView, visibilityCallback: self.popupVisibilityCallback)
+        let popupTitle = self.config.name == "RAM" ? "MemoryBar" : self.config.name
+        self.popup = PopupWindow(title: popupTitle, module: self.moduleType, view: self.popupView, visibilityCallback: self.popupVisibilityCallback)
     }
     
     deinit {
@@ -215,7 +209,6 @@ open class Module {
             reader.start()
         }
         self.menuBar.enable()
-        self.window?.setState(self.enabled)
         debug("Module enabled", log: self.log)
     }
     
@@ -224,13 +217,10 @@ open class Module {
         guard self.available else { return }
         
         self.enabled = false
-        if !self.pauseState { // omit saving the disable state when toggle by pause, need for resume state restoration
-            Store.shared.set(key: "\(self.config.name)_state", value: false)
-            self.userDefaults?.set(false, forKey: "\(self.config.name)_state")
-        }
+        Store.shared.set(key: "\(self.config.name)_state", value: false)
+        self.userDefaults?.set(false, forKey: "\(self.config.name)_state")
         self.readers.forEach{ $0.stop() }
         self.menuBar.disable()
-        self.window?.setState(self.enabled)
         self.popup?.setIsVisible(false)
         debug("Module disabled", log: self.log)
     }
@@ -334,31 +324,6 @@ open class Module {
         }
     }
     
-    @objc private func listenForModuleToggle(_ notification: Notification) {
-        if let name = notification.userInfo?["module"] as? String {
-            if name == self.config.name {
-                if let state = notification.userInfo?["state"] as? Bool {
-                    if state && !self.enabled {
-                        self.enable()
-                    } else if !state && self.enabled {
-                        self.disable()
-                    }
-                } else {
-                    if self.enabled {
-                        self.disable()
-                    } else {
-                        self.enable()
-                    }
-                }
-            }
-            
-            if self.pauseState == true {
-                self.pauseState = false
-                NotificationCenter.default.post(name: .pause, object: nil, userInfo: ["state": false])
-            }
-        }
-    }
-    
     @objc private func listenForMouseDownInSettings() {
         if let popup = self.popup, popup.isVisible && !popup.locked {
             self.popup?.setIsVisible(false)
@@ -371,7 +336,7 @@ open class Module {
         }
         let isEmpty = self.menuBar.widgets.filter({ $0.isActive }).isEmpty
         if !isEmpty && !self.enabled {
-            NotificationCenter.default.post(name: .toggleModule, object: nil, userInfo: ["module": self.config.name, "state": true])
+            self.enable()
         }
     }
 }

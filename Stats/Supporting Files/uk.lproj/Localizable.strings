@@ -1,6 +1,6 @@
 //
 //  Localizable.strings
-//  Stats
+//  MemoryBar
 //
 //  Created by Serhiy Mytrovtsiy on 27/08/2020.
 //  Using Swift 5.0.
@@ -31,7 +31,6 @@
 
 // Words
 "Unknown" = "Невідомо";
-"Version" = "Версія";
 "Processor" = "Процесор";
 "Memory" = "Память";
 "Graphics" = "Графіка";
@@ -59,6 +58,7 @@
 "Center alignment" = "По центру";
 "Right alignment" = "Праворуч";
 "Dashboard" = "Головний екран"; // translategemma:4b
+"Enabled" = "Включено";
 "Disabled" = "Виключено";
 "Silent" = "Безшумно";
 "Units" = "Одиниці";
@@ -82,6 +82,8 @@
 "2 minutes" = "2 хвилини";
 "3 minutes" = "3 хвилини";
 "10 minutes" = "10 хвилин";
+"Import" = "Імпорт";
+"Export" = "Експорт";
 "Separator" = "Роздільник";
 "Read" = "Зчитування";
 "Write" = "Запис";
@@ -100,72 +102,48 @@
 "60 sec" = "60 сек";
 
 // Setup
-"Stats Setup" = "Налаштування";
+"MemoryBar Setup" = "Налаштування";
 "Previous" = "Попередня";
 "Previous page" = "Попередня сторінка";
 "Next" = "Наступна";
 "Next page" = "Наступна сторінка";
 "Finish" = "Завершити";
 "Finish setup" = "Завершити налаштування";
-"Welcome to Stats" = "Вітаю в Stats";
-"welcome_message" = "Дякуємо, що використовуєте Stats, безкоштовним моніторингом системи macOS з відкритим кодом.";
-"Select preset" = "Виберіть пресет";
-"select_preset_message" = "Виберіть початковий набір модулів. Ви можете налаштувати все пізніше в налаштуваннях.";
-"Default" = "За замовчуванням";
-"Basic" = "Рекомендований";
-"Recommended" = "Recommended";
-"Extended" = "Розширений";
+"Welcome to MemoryBar" = "Вітаю в MemoryBar";
+"welcome_message" = "Дякуємо, що використовуєте MemoryBar, безкоштовним моніторингом системи macOS з відкритим кодом.";
 "Start the application automatically when starting your Mac" = "Запускати програму автоматично під час запуску Mac";
 "Do not start the application automatically when starting your Mac" = "Не запускати програму автоматично під час запуску Mac";
-"Do everything silently in the background (recommended)" = "Робити усе у фоновому режимі (рекомендовано)";
-"Check for a new version on startup" = "Перевірти наявність нової версії під час запуску програми";
-"Check for a new version every day (once a day)" = "Щодня перевіряти наявність нової версії (один раз на день)";
-"Check for a new version every week (once a week)" = "Щотижня перевіряти наявність нової версії (раз на тиждень)";
-"Check for a new version every month (once a month)" = "Перевіряти наявність нової версії щомісяця (раз на місяць)";
-"Never check for updates (not recommended)" = "Ніколи не перевіряти наявність оновлень (не рекомендовано)";
+"Anonymous telemetry for better development decisions" = "Анонімна телеметрія для кращих рішень щодо програми";
+"Share anonymous telemetry data" = "Ділитись анонімними даними телеметрії";
+"Do not share anonymous telemetry data" = "Не передавати анонімні дані телеметрії";
 "The configuration is completed" = "Налаштування завершено";
-"finish_setup_message" = "Все налаштовано! \n Stats — це інструмент з відкритим вихідним кодом, він безкоштовний і таким завжди буде. \n Якщо вам це подобається ви можете підтримати проект, це завжди цінується!";
+"finish_setup_message" = "MemoryBar is ready.";
 
 // Alerts
-"New version available" = "Доступна нова версія";
-"Click to install the new version of Stats" = "Натисніть щоб встановити нову версію Stats";
-"Successfully updated" = "Успішно оновленно";
-"Stats was updated to v" = "Stats оновлено до v%0";
 "Reset settings text" = "Усі налаштування програми буде скинуто, і програма буде перезапущена. Ви впевнені, що хочете це зробити?";
-"Deregister text" = "Реєстрацію програми буде скасовано в System Stats, і ви вийдете з неї. Ви впевнені, що хочете це зробити?";
-"Support text" = "Дякуємо за використання Stats!\n\n Підтримка і вдосконалення цього проекту з відкритим вихідним кодом вимагає часу і ресурсів. Ваша підтримка допомагає нам продовжувати надавати безкоштовну і надійну програму для всіх.\n\nЯкщо ви вважаєте Stats корисною, будь ласка, зробіть свій внесок. Кожна копійка допомагає!";
 
 // Settings
 "Open Activity Monitor" = "Відкрити Монітор активності";
-"Report a bug" = "Повідомити про помилку";
-"Support the application" = "Підтримати програму";
 "Close application" = "Закрити програму";
 "Open application settings" = "Відкрити налаштування";
 "Open dashboard" = "Відкрити dashboard";
 "No notifications available in this module" = "У цьому модулі немає повідомлень";
 "Open Calendar" = "Відкрити календар";
-"Toggle the module" = "Перемкніть модуль";
-"Open System Stats" = "Відкрити System Stats";
 
 // Application settings
-"Check for updates" = "Перевіряти оновленя";
+"Update application" = "Оновити програму";
 "At start" = "При включенні";
 "Once per day" = "Раз на день";
 "Once per week" = "Раз на тиждень";
 "Once per month" = "Раз на місяць";
 "Never" = "Ніколи";
-"Check for update" = "Перевірити оновленя";
 "Show icon in dock" = "Показувати іконку в dock";
 "Start at login" = "Запускати при логуванні";
-"Build number" = "Номер збірки";
 "Import settings" = "Імпорт налаштувань";
 "Export settings" = "Експорт налаштувань";
 "Reset settings" = "Скидання налаштувань";
-"Pause the Stats" = "Призупинити Stats";
-"Resume the Stats" = "Відновити Stats";
-"Combined modules" = "Комбіновані модулі";
-"Combined details" = "Комбіновані деталі";
 "Spacing" = "Інтервал";
+"Share anonymous telemetry" = "Ділитись анонімною телеметрією";
 "Choose file" = "Виберіть файл";
 "Stress tests" = "Стрес-тести";
 
@@ -183,10 +161,6 @@
 "Display" = "Монітор";
 
 // Update
-"The latest version of Stats installed" = "Встановлено останню версію";
-"Downloading..." = "Завантаження...";
-"Current version: " = "Поточна версія:  ";
-"Latest version: " = "Остання версія:  ";
 
 // Widgets
 "Color" = "Колір";
@@ -197,6 +171,7 @@
 "Colorize" = "Розфарбувати";
 "Colorize value" = "Розфарбувати значення";
 "Additional information" = "Додаткова інформація";
+"Reverse values order" = "Змінити порядок сортування";
 "Base" = "Основа";
 "Display mode" = "Режим відображення";
 "One row" = "Один ряд";
@@ -230,6 +205,7 @@
 
 // Module Kit
 "Open module settings" = "Відкрити налаштування модуля";
+"Select widget" = "Активувати %0 віджет";
 "Open widget settings" = "Відкрити налаштування віджета";
 "Update interval" = "Інтервал оновлень";
 "Usage history" = "Історія використання";
@@ -251,6 +227,7 @@
 // Modules
 "Number of top processes" = "Кількість процесів";
 "Update interval for top processes" = "Інтервал оновлення для процесів";
+"Notification level" = "Рівень сповіщення";
 "Chart color" = "Колір діаграми";
 "Main chart scaling" = "Масштабування основної діаграми";
 "Scale value" = "Значення масштабування";
@@ -274,6 +251,7 @@
 "5 minutes" = "5 хвилин";
 "15 minutes" = "15 хвилин";
 "CPU usage threshold" = "Поріг використання процесора";
+"CPU usage is" = "Використання процесора %0";
 "Efficiency cores" = "Енергоефективні ядра";
 "Performance cores" = "Високопродуктивні ядра";
 "System color" = "Системний колір";
@@ -296,9 +274,18 @@
 // GPU
 "GPU to show" = "Активний графічний процесор";
 "Show GPU type" = "Показувати тип графічного процесора";
+"GPU enabled" = "Увімкнено";
+"GPU disabled" = "Вимкнено";
+"GPU temperature" = "Температура графічного процесора";
 "GPU utilization" = "Навантаженість графічного процесора";
+"Vendor" = "Постачальник";
 "Model" = "Модель";
 "Status" = "Статус";
+"Active" = "Активна";
+"Non active" = "Неактивна";
+"Fan speed" = "Швидкість вентилятора";
+"Core clock" = "Частота процесора";
+"Memory clock" = "Частота пам'яті";
 "Utilization" = "Використання";
 "Render utilization" = "Використання render";
 "Tiler utilization" = "Використання tiler";
@@ -340,28 +327,13 @@
 "Disk usage" = "Використання диска";
 "Total read" = "Всього прочитано";
 "Total written" = "Всього записано";
-"File system" = "Файлова система";
-"Connection type" = "Тип підключення";
-"BSD name" = "Назва BSD";
-"Encrypted" = "Шифрування";
-"Writable" = "Записуваний";
+"Write speed" = "Запис";
+"Read speed" = "Зчитування";
 "Drives" = "Диски";
 "SMART data" = "SMART дані";
-"ATA SMART data" = "ATA SMART дані";
-"Power cycles" = "Кількість циклів";
-"Power on hours" = "Години роботи";
-"Critical warning" = "Критичне попередження";
-"Available spare" = "Доступний простір";
-"Unsafe shutdowns" = "Небезпечні вимкнення";
-"Media errors" = "Помилки медіа";
-"Threshold" = "Поріг";
-"Spare below threshold" = "Запасний елемент нижче порогу";
-"Temperature out of range" = "Температура поза межами допустимого діапазону";
-"Reliability degraded" = "Зниження надійності";
-"Read-only mode" = "Режим лише для читання";
-"Backup failed" = "Не вдалося створити резервну копію";
 
 // Sensors
+"Temperature unit" = "Одиниця виміру температури";
 "Celsius" = "Цельсія";
 "Fahrenheit" = "Фаренгейта";
 "Save the fan speed" = "Зберегти швидкість вентилятора";
@@ -373,12 +345,6 @@
 "Show unknown sensors" = "Показати невідомі датчики";
 "Install fan helper" = "Встановити помічник для вентилятора";
 "Uninstall fan helper" = "Видалити помічник для вентилятора";
-"Approve in System Settings ▸ Login Items" = "Approve in System Settings ▸ Login Items";
-"Fan helper needs your approval" = "Fan helper needs your approval";
-"To control the fans, enable Stats in System Settings ▸ Login Items." = "To control the fans, enable Stats in System Settings ▸ Login Items.";
-"Open Login Items" = "Open Login Items";
-"Could not enable the fan helper" = "Could not enable the fan helper";
-"Open System Settings ▸ Login Items, make sure Stats is allowed in the background, then try again." = "Open System Settings ▸ Login Items, make sure Stats is allowed in the background, then try again.";
 "Fan value" = "Значення вентилятора";
 "Turn off fan" = "Вимкнути вентилятор";
 "You are going to turn off the fan. This is not recommended action that can damage your mac, are you sure you want to do that?" = "Ви збираєтеся вимкнути вентилятор. Це не рекомендована дія, яка може зламати ваш Mac. Ви впевнені, що хочете це зробити?";
@@ -396,6 +362,11 @@
 "Interface" = "Інтерфейс";
 "Physical address" = "Фізичний адрес";
 "Refresh" = "Оновити";
+"Click to copy public IP address" = "Натисніть, щоб скопіювати публічний IP";
+"Click to copy local IP address" = "Натисніть, щоб скопіювати локальний IP";
+"Click to copy wifi name" = "Натисніть, щоб скопіювати назву wifi";
+"Click to copy mac address" = "Натисніть, щоб скопіювати фізичний адрес";
+"No connection" = "Немає з'єднання";
 "Network interface" = "Мережевий інтерфейс";
 "Total download" = "Загально завантажено";
 "Total upload" = "Загально вислано";
@@ -407,9 +378,12 @@
 "Standard" = "Стандарт";
 "Security" = "Шифрування";
 "Channel" = "Канал";
+"Common scale" = "Загальна шкала";
 "Autodetection" = "Автовизначення";
 "Widget activation threshold" = "Поріг активації віджета";
 "Internet connection" = "Підключення до інтернету";
+"Active state color" = "Колір активного стану";
+"Nonactive state color" = "Колір неактивного стану";
 "Connectivity host" = "Хост підключення";
 "Leave empty to disable the check" = "Залиште пустим, щоб вимкнути перевірку";
 "Connectivity history" = "Історія підключення";
@@ -417,8 +391,11 @@
 "Every hour" = "Щогодини";
 "Every 12 hours" = "Кожні 12 годин";
 "Every 24 hours" = "Кожні 24 години";
+"Network activity" = "Мережева активність";
 "Last reset" = "Останнє скидання %0 тому";
 "Latency" = "Затримка";
+"Upload speed" = "Висилання";
+"Download speed" = "Завантаження";
 "Address" = "Адреса";
 "WiFi network" = "Мережа WiFi";
 "Local IP changed" = "Локальна IP-адреса була змінена";
@@ -430,6 +407,7 @@
 "Show country code instead of emoji" = "Показувати код країни замість емодзі";
 
 // Battery
+"Level" = "Рівень заряду";
 "Source" = "Джерело";
 "AC Power" = "Мережа";
 "Battery Power" = "Акумулятор";
@@ -446,6 +424,7 @@
 "Time to charge" = "Час до зарядки";
 "Calculating" = "Обчислення";
 "Fully charged" = "Повністю заряджена";
+"Not connected" = "Не під'єднаний";
 "Low level notification" = "Повідомлення про низький рівень заряду";
 "High level notification" = "Повідомлення про високий рівень заряду";
 "Low battery" = "Низький заряд акумулятора";
@@ -457,16 +436,18 @@
 "Time and percentage" = "Час і проценти";
 "Time format" = "Формат часу";
 "Hide additional information when full" = "Приховати додаткову інформацію, якщо акумулятор заряджений";
+"Last charge" = "Остання зарядка";
+"Capacity" = "Ємність";
+"current / maximum / designed" = "поточна / максимальна / запроектована";
+"Low power mode" = "Режим низької потужності";
 "Percentage inside the icon" = "Відсоток всередині віджету";
+"Colorize battery" = "Розфарбувати акумулятор";
+"Charging current" = "Струм зарядки";
+"Charging Voltage" = "Напруга зарядки";
 "Charger state inside the battery" = "Стан зарядки всередині акумулятора";
-"Max capacity" = "Max capacity";
-"Designed capacity" = "Designed capacity";
-"On hold" = "On hold";
-"On battery" = "On battery";
-"Plugged in" = "Plugged in";
-"Charging" = "Charging";
 
 // Bluetooth
+"Battery to show" = "Активна батарея";
 "No Bluetooth devices are available" = "Немає пристроїв Bluetooth";
 
 // Clock
@@ -478,9 +459,7 @@
 "Add new clock" = "Додати новий годинник";
 "Delete selected clock" = "Видалити вибраний годинник";
 "Help with datetime format" = "Довідка з форматом дати й часу";
-"Sync with NTP server" = "Синхронізація з сервером NTP";
-"Previous month" = "Previous month";
-"Next month" = "Next month";
+"Sync with NTP server" = "Синхронізація з сервером NTP"; // translategemma:4b
 
 // Colors
 "Based on utilization" = "На основі використання";

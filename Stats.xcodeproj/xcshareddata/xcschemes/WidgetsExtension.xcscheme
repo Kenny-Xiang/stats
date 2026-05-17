@@ -31,8 +31,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9A1410F4229E721100D29793"
-               BuildableName = "Stats.app"
-               BlueprintName = "Stats"
+               BuildableName = "MemoryBar.app"
+               BlueprintName = "MemoryBar"
                ReferencedContainer = "container:Stats.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -73,8 +73,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9A1410F4229E721100D29793"
-            BuildableName = "Stats.app"
-            BlueprintName = "Stats"
+            BuildableName = "MemoryBar.app"
+            BlueprintName = "MemoryBar"
             ReferencedContainer = "container:Stats.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -109,8 +109,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9A1410F4229E721100D29793"
-            BuildableName = "Stats.app"
-            BlueprintName = "Stats"
+            BuildableName = "MemoryBar.app"
+            BlueprintName = "MemoryBar"
             ReferencedContainer = "container:Stats.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
