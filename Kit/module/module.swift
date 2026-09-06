@@ -88,7 +88,8 @@ open class Module {
         get { Store.shared.int(key: "\(self.name)_position", defaultValue: 0) }
         set { Store.shared.set(key: "\(self.name)_position", value: newValue) }
     }
-    public var userDefaults: UserDefaults? = UserDefaults(suiteName: "\(Bundle.main.object(forInfoDictionaryKey: "TeamId") as! String).eu.exelban.Stats.widgets")
+    // MemoryBar does not ship a WidgetKit extension or access Stats' shared container.
+    public var userDefaults: UserDefaults? = nil
     
     public var popupKeyboardShortcut: [UInt16] { self.popupView?.keyboardShortcut ?? [] }
     
