@@ -415,7 +415,6 @@ open class Window: NSStackView {
 
         self.segmentedControl?.widthAnchor.constraint(equalTo: self.widthAnchor, constant: -(Constants.Settings.margin*2)).isActive = true
         self.widgetSelector?.widthAnchor.constraint(equalTo: self.widthAnchor, constant: -(Constants.Settings.margin*2)).isActive = true
-        self.moduleSettings?.widthAnchor.constraint(equalTo: self.widthAnchor, constant: -(Constants.Settings.margin*2)).isActive = true
     }
 
     deinit {
@@ -561,6 +560,7 @@ open class Window: NSStackView {
 
         let widgetSelector = WidgetSelectorView(module: self.config.name, widgets: self.widgets, stateCallback: self.loadWidget)
 
+        self.widgetSelector = widgetSelector
         view.addArrangedSubview(widgetSelector)
         view.addArrangedSubview(segmentedControl)
         view.addArrangedSubview(tabView)
@@ -578,7 +578,10 @@ open class Window: NSStackView {
 
         if let settingsView = self.moduleSettings {
             settingsView.load(widgets: self.widgets.filter{ $0.isActive }.map{ $0.type })
-            self.moduleSettingsContainer?.addArrangedSubview(settingsView)
+            if let container = self.moduleSettingsContainer {
+                container.addArrangedSubview(settingsView)
+                settingsView.widthAnchor.constraint(equalTo: container.widthAnchor).isActive = true
+            }
         } else {
             self.moduleSettingsContainer?.addArrangedSubview(NSView())
         }
